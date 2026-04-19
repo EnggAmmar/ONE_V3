@@ -1,0 +1,107 @@
+{
+  "version": "v1",
+  "families": [
+    {
+      "family_id": "remote_sensing",
+      "label": "Remote Sensing",
+      "description": "Earth observation missions (optical, hyperspectral, thermal, SAR) with revisit-driven constellation sizing.",
+      "payload_categories": [
+        {
+          "category_id": "hyperspectral",
+          "label": "Hyperspectral",
+          "description": "High spectral resolution imaging for material classification and analytics."
+        },
+        {
+          "category_id": "multispectral",
+          "label": "Multispectral",
+          "description": "Multi-band imaging for agriculture, land use, and environmental monitoring."
+        },
+        {
+          "category_id": "vhr_optical",
+          "label": "VHR Optical",
+          "description": "Very-high-resolution optical imaging with tighter pointing constraints."
+        },
+        {
+          "category_id": "thermal",
+          "label": "Thermal",
+          "description": "Thermal infrared imaging for heat signatures and temperature mapping."
+        },
+        {
+          "category_id": "sar",
+          "label": "SAR",
+          "description": "Synthetic aperture radar for all-weather, day/night imaging and surface deformation."
+        },
+        {
+          "category_id": "my_payload",
+          "label": "My Payload",
+          "description": "Confidential synthetic payload input (dimensions, mass, power, optional data/pointing/thermal)."
+        }
+      ]
+    },
+    {
+      "family_id": "iot_communication",
+      "label": "IoT / Communication",
+      "description": "Store-and-forward IoT and communications missions with data-rate and link-driven sizing.",
+      "payload_categories": [
+        {
+          "category_id": "iot_store_and_forward",
+          "label": "IoT Store-and-Forward",
+          "description": "Collect bursts from ground terminals and downlink later on scheduled passes."
+        },
+        {
+          "category_id": "broadband_comms",
+          "label": "Broadband Comms",
+          "description": "Higher throughput communications payloads with power and thermal implications."
+        },
+        {
+          "category_id": "optical_comms",
+          "label": "Optical Comms",
+          "description": "Laser communications with pointing and acquisition constraints."
+        },
+        {
+          "category_id": "secure_comms",
+          "label": "Secure Comms",
+          "description": "Mission modes requiring enhanced security and crypto-accelerated processing."
+        },
+        {
+          "category_id": "my_payload",
+          "label": "My Payload",
+          "description": "Confidential synthetic payload input (dimensions, mass, power, optional data/pointing/thermal)."
+        }
+      ]
+    },
+    {
+      "family_id": "navigation",
+      "label": "Navigation",
+      "description": "Navigation-related missions including PNT augmentation, tracking, and timing experiments.",
+      "payload_categories": [
+        {
+          "category_id": "pnt_augmentation",
+          "label": "PNT Augmentation",
+          "description": "Payloads intended to augment positioning, navigation, and timing services."
+        },
+        {
+          "category_id": "ais_adsb_tracking",
+          "label": "AIS / ADS-B Tracking",
+          "description": "Tracking payloads for maritime (AIS) and aviation (ADS-B) signal reception."
+        },
+        {
+          "category_id": "rf_navigation_payload",
+          "label": "RF Navigation Payload",
+          "description": "RF navigation experiments (signal generation, reception, and measurement)."
+        },
+        {
+          "category_id": "timing_navigation_experiment",
+          "label": "Timing / Navigation Experiment",
+          "description": "Precision timing and navigation experiment payloads with stability constraints."
+        },
+        {
+          "category_id": "my_payload",
+          "label": "My Payload",
+          "description": "Confidential synthetic payload input (dimensions, mass, power, optional data/pointing/thermal)."
+        }
+      ]
+    }
+  ]
+}
+
