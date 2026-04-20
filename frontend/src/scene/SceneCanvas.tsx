@@ -2,28 +2,35 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { SceneDirector } from "./SceneDirector";
 import { CursorGlow } from "./effects/CursorGlow";
+import { Starfield } from "./background/Starfield";
+import { DeepSpaceBackdrop } from "./background/DeepSpaceBackdrop";
+import { SceneErrorBoundary } from "./SceneErrorBoundary";
 
 export function SceneCanvas() {
   const isAutomation = typeof navigator !== "undefined" && Boolean((navigator as any).webdriver);
   return (
     <div className="scene-root sceneLayer" aria-hidden>
-      <Canvas
-        frameloop={isAutomation ? "demand" : "always"}
-        camera={{ position: [0, 0, 7], fov: 35 }}
-        gl={{ antialias: true, alpha: true }}
-        dpr={[1, 2]}
-      >
-        <color attach="background" args={["#02060d"]} />
-        <fog attach="fog" args={["#02060d", 8, 20]} />
+      <SceneErrorBoundary fallback={null}>
+        <Canvas
+          frameloop={isAutomation ? "demand" : "always"}
+          camera={{ position: [0, 0.3, 7], fov: 35 }}
+          gl={{ antialias: true, alpha: true }}
+          dpr={[1, 2]}
+        >
+          <color attach="background" args={["#02060d"]} />
+          <fog attach="fog" args={["#02060d", 10, 38]} />
 
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[4, 4, 5]} intensity={1.5} color="#7fc8ff" />
-        <pointLight position={[-5, 2, 3]} intensity={0.75} color="#2da8ff" />
+          <ambientLight intensity={0.3} />
+          <directionalLight position={[5, 3, 5]} intensity={1.15} color="#7ac6ff" />
+          <pointLight position={[-6, 2, 4]} intensity={0.45} color="#2e8bff" />
 
-        <Suspense fallback={null}>
-          <SceneDirector />
-        </Suspense>
-      </Canvas>
+          <Suspense fallback={null}>
+            <DeepSpaceBackdrop />
+            <Starfield />
+            <SceneDirector />
+          </Suspense>
+        </Canvas>
+      </SceneErrorBoundary>
 
       <CursorGlow />
     </div>

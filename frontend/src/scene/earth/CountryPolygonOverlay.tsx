@@ -2,7 +2,6 @@ import { useEffect, useMemo } from "react";
 import * as THREE from "three";
 import worldCountries from "../../data/world-countries.geo.json";
 import { useSceneStore } from "../../store/sceneStore";
-import { getCountryCode } from "../../lib/geo/countryIndex";
 import { ringToSpherePoints } from "../../lib/geo/globeProjection";
 
 type Props = {
@@ -14,6 +13,10 @@ type AnyFeature = {
   geometry?: any;
 };
 
+function getCode(props: any): string {
+  return props.ISO_A3 ?? props.iso_a3 ?? "";
+}
+
 function sanitizeRing(ring: [number, number][]) {
   if (ring.length < 2) return ring;
   const a = ring[0];
@@ -22,16 +25,28 @@ function sanitizeRing(ring: [number, number][]) {
   return ring;
 }
 
-function PolygonLine({ ring, radius }: { ring: [number, number][]; radius: number }) {
+function PolygonLine({
+  ring,
+  radius,
+  glow = false,
+}: {
+  ring: [number, number][];
+  radius: number;
+  glow?: boolean;
+}) {
   const line = useMemo(() => {
     const pts = ringToSpherePoints([...sanitizeRing(ring), ring[0]], radius);
     const geometry = new THREE.BufferGeometry().setFromPoints(pts);
-    const material = new THREE.LineBasicMaterial({ color: new THREE.Color("#dff0ff"), transparent: true, opacity: 0.95 });
+    const material = new THREE.LineBasicMaterial({
+      color: new THREE.Color(glow ? "#67cfff" : "#f3f8ff"),
+      transparent: true,
+      opacity: glow ? 0.25 : 0.95,
+    });
     const l = new THREE.Line(geometry, material);
     l.frustumCulled = false;
-    l.renderOrder = 11;
+    l.renderOrder = glow ? 10 : 11;
     return { l, geometry, material };
-  }, [ring, radius]);
+  }, [glow, ring, radius]);
 
   useEffect(() => {
     return () => {
@@ -52,7 +67,7 @@ export function CountryPolygonOverlay({ radius }: Props) {
     if (!selectedRegion?.id) return null;
     const id = selectedRegion.id.toUpperCase();
     const fc = worldCountries as any;
-    return (fc.features as AnyFeature[]).find((f) => getCountryCode(f.properties ?? {}).toUpperCase() === id) ?? null;
+    return (fc.features as AnyFeature[]).find((f) => getCode(f.properties ?? {}).toUpperCase() === id) ?? null;
   }, [selectedRegion?.id, step]);
 
   if (!feature) return null;
@@ -63,6 +78,7 @@ export function CountryPolygonOverlay({ radius }: Props) {
     const outerRing = geometry.coordinates[0] as [number, number][];
     return (
       <group>
+        <PolygonLine ring={outerRing} radius={radius * 1.003} glow />
         <PolygonLine ring={outerRing} radius={radius} />
       </group>
     );
@@ -72,7 +88,10 @@ export function CountryPolygonOverlay({ radius }: Props) {
     return (
       <group>
         {geometry.coordinates.map((poly: [number, number][][], idx: number) => (
-          <PolygonLine key={idx} ring={poly[0]} radius={radius} />
+          <group key={idx}>
+            <PolygonLine ring={poly[0]} radius={radius * 1.003} glow />
+            <PolygonLine ring={poly[0]} radius={radius} />
+          </group>
         ))}
       </group>
     );

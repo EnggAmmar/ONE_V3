@@ -29,7 +29,7 @@ export function EarthRotationController({ earthGroupRef }: Props) {
       return;
     }
 
-    if (!selectedRegion?.lat || !selectedRegion?.lon) return;
+    if (selectedRegion?.lat == null || selectedRegion?.lon == null) return;
 
     setEarthAutoRotate(false);
     const { x, y } = rotationForCountryFocus(selectedRegion.lat, selectedRegion.lon);
@@ -37,20 +37,33 @@ export function EarthRotationController({ earthGroupRef }: Props) {
     gsap.to(group.rotation, {
       x,
       y,
-      duration: 1.25,
+      duration: 1.4,
       ease: "power3.inOut",
       onComplete: () => setEarthFocused(true),
     });
+
+    gsap.fromTo(
+      group.scale,
+      { x: 1, y: 1, z: 1 },
+      {
+        x: 1.035,
+        y: 1.035,
+        z: 1.035,
+        duration: 0.28,
+        yoyo: true,
+        repeat: 1,
+        ease: "power2.inOut",
+      },
+    );
   }, [earthGroupRef, selectedRegion?.lat, selectedRegion?.lon, setEarthAutoRotate, setEarthFocused, step]);
 
   useFrame((_, delta) => {
     const group = earthGroupRef.current;
     if (!group) return;
     if (earthAutoRotate) {
-      group.rotation.y += delta * 0.06;
+      group.rotation.y += delta * 0.055;
     }
   });
 
   return null;
 }
-

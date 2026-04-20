@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import WizardShell from "../components/WizardShell";
 import { useMission } from "../state/mission";
 import { useSceneStore } from "../store/sceneStore";
-import { resolveCountry } from "../lib/geo/countryIndex";
+import { resolveCountry } from "../lib/geo/countrySearch";
 
 export default function RoiPage() {
   const nav = useNavigate();

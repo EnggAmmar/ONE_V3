@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { useMission } from "../state/mission";
 import { useSceneStore } from "../store/sceneStore";
 import type { PayloadType, SceneStep } from "../types/scene";
-import { resolveCountry } from "../lib/geo/countryIndex";
+import { resolveCountry } from "../lib/geo/countrySearch";
 import LeftDock from "./LeftDock";
 
 function stepFromPath(pathname: string): SceneStep {

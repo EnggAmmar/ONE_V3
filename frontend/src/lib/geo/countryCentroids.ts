@@ -1,4 +1,4 @@
-type Position = [number, number]; // [lon, lat]
+type Position = [number, number];
 
 function averagePositions(points: Position[]): Position {
   if (!points.length) return [0, 0];
@@ -14,20 +14,18 @@ function averagePositions(points: Position[]): Position {
   return [lon / points.length, lat / points.length];
 }
 
-export function polygonCentroid(ring: Position[]): Position {
+function polygonCentroid(ring: Position[]): Position {
   return averagePositions(ring);
 }
 
-export function multiPolygonCentroid(polygons: Position[][][]): Position {
-  const samples: Position[] = [];
+function multiPolygonCentroid(polygons: Position[][][]): Position {
+  const pts: Position[] = [];
 
   for (const poly of polygons) {
-    if (poly[0]?.length) {
-      samples.push(polygonCentroid(poly[0]));
-    }
+    if (poly[0]?.length) pts.push(polygonCentroid(poly[0]));
   }
 
-  return averagePositions(samples);
+  return averagePositions(pts);
 }
 
 export function featureCentroid(geometry: any): Position {
@@ -43,4 +41,3 @@ export function featureCentroid(geometry: any): Position {
 
   return [0, 0];
 }
-

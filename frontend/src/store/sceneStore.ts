@@ -12,6 +12,10 @@ type SceneStore = {
   earthAutoRotate: boolean;
   earthFocused: boolean;
 
+  constellationTotalSatellites: number;
+  constellationPlanes: number;
+  constellationSatellitesPerPlane: number;
+
   setStep: (step: SceneStep) => void;
   setMissionFamily: (missionFamily: MissionFamily) => void;
   setPayloadType: (payloadType: PayloadType) => void;
@@ -20,6 +24,7 @@ type SceneStore = {
   setROIInteractionEnabled: (enabled: boolean) => void;
   setEarthAutoRotate: (enabled: boolean) => void;
   setEarthFocused: (focused: boolean) => void;
+  setConstellation: (c: { totalSatellites: number; planes: number; satellitesPerPlane?: number }) => void;
 };
 
 export const useSceneStore = create<SceneStore>((set) => ({
@@ -32,6 +37,10 @@ export const useSceneStore = create<SceneStore>((set) => ({
   roiInteractionEnabled: false,
   earthAutoRotate: true,
   earthFocused: false,
+
+  constellationTotalSatellites: 3,
+  constellationPlanes: 3,
+  constellationSatellitesPerPlane: 1,
 
   setStep: (step) =>
     set({
@@ -48,4 +57,13 @@ export const useSceneStore = create<SceneStore>((set) => ({
   setROIInteractionEnabled: (roiInteractionEnabled) => set({ roiInteractionEnabled }),
   setEarthAutoRotate: (earthAutoRotate) => set({ earthAutoRotate }),
   setEarthFocused: (earthFocused) => set({ earthFocused }),
+  setConstellation: ({ totalSatellites, planes, satellitesPerPlane }) =>
+    set({
+      constellationTotalSatellites: Math.max(1, Math.floor(totalSatellites)),
+      constellationPlanes: Math.max(1, Math.floor(planes)),
+      constellationSatellitesPerPlane:
+        satellitesPerPlane != null
+          ? Math.max(1, Math.floor(satellitesPerPlane))
+          : Math.max(1, Math.ceil(totalSatellites / Math.max(1, planes))),
+    }),
 }));

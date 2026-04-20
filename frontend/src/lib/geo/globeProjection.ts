@@ -16,12 +16,12 @@ export function lonLatToVector3(radius: number, lonDeg: number, latDeg: number):
 }
 
 export function rotationForCountryFocus(latDeg: number, lonDeg: number) {
-  const targetY = -THREE.MathUtils.degToRad(lonDeg);
-  const targetX = THREE.MathUtils.degToRad(latDeg) * 0.28;
-  return { x: targetX, y: targetY };
+  return {
+    x: THREE.MathUtils.degToRad(latDeg) * 0.25,
+    y: -THREE.MathUtils.degToRad(lonDeg),
+  };
 }
 
 export function ringToSpherePoints(ring: [number, number][], radius: number): THREE.Vector3[] {
   return ring.map(([lon, lat]) => lonLatToVector3(radius, lon, lat));
 }
-

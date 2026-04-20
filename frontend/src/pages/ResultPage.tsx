@@ -3,10 +3,12 @@ import { useNavigate } from "react-router-dom";
 import WizardShell from "../components/WizardShell";
 import { downloadMissionReport, solveMission, type MissionSolveResponse } from "../lib/api";
 import { requireMissionInput, useMission } from "../state/mission";
+import { useSceneStore } from "../store/sceneStore";
 
 export default function ResultPage() {
   const nav = useNavigate();
   const { draft } = useMission();
+  const setConstellation = useSceneStore((s) => s.setConstellation);
 
   const input = useMemo(() => {
     try {
@@ -46,6 +48,10 @@ export default function ResultPage() {
       .then((r) => {
         if (!alive) return;
         setData(r);
+        setConstellation({
+          totalSatellites: r.constellation.satellites,
+          planes: r.constellation.planes,
+        });
         setError(null);
       })
       .catch((e) => {
