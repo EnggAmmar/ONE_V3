@@ -7,6 +7,7 @@ import { useSceneStore } from "../store/sceneStore";
 import type { ScenePose, SceneStep } from "../types/scene";
 import { EarthSystem } from "./earth/EarthSystem";
 import { SatelliteHero } from "./satellite/SatelliteHero";
+import { getSceneControls } from "./controls/controlsRegistry";
 
 function getPose(step: SceneStep): ScenePose {
   switch (step) {
@@ -72,19 +73,27 @@ export function SceneDirector() {
   const pose = useMemo(() => getPose(step), [step]);
 
   useEffect(() => {
+    const controls = getSceneControls();
+    if (controls) {
+      controls.target.set(pose.cameraTarget[0], pose.cameraTarget[1], pose.cameraTarget[2]);
+      controls.update();
+    } else {
+      camera.lookAt(new Vector3(...pose.cameraTarget));
+    }
+
+    gsap.killTweensOf(camera.position);
     gsap.to(camera.position, {
       x: pose.cameraPosition[0],
       y: pose.cameraPosition[1],
       z: pose.cameraPosition[2],
       duration: 1.2,
       ease: "power3.inOut",
+      onUpdate: () => controls?.update(),
+      onComplete: () => controls?.update(),
     });
   }, [camera, pose]);
 
   useFrame(() => {
-    const target = new Vector3(...pose.cameraTarget);
-    camera.lookAt(target);
-
     if (earthRef.current) {
       earthRef.current.position.lerp(new Vector3(...pose.earthPosition), 0.08);
       earthRef.current.scale.lerp(new Vector3(pose.earthScale, pose.earthScale, pose.earthScale), 0.08);

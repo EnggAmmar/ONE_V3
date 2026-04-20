@@ -6,7 +6,6 @@ import { EarthDots } from "./EarthDots";
 import { Atmosphere } from "./Atmosphere";
 import { OrbitLayer } from "./OrbitLayer";
 import { CountryPolygonOverlay } from "./CountryPolygonOverlay";
-import { ROIControls } from "./ROIControls";
 import { EarthRotationController } from "./EarthRotationController";
 
 export const EarthSystem = forwardRef<Group>(function EarthSystem(_, ref) {
@@ -31,7 +30,6 @@ export const EarthSystem = forwardRef<Group>(function EarthSystem(_, ref) {
       </group>
 
       <EarthRotationController earthGroupRef={internalRef} />
-      <ROIControls />
     </group>
   );
 });

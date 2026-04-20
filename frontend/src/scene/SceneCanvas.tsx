@@ -5,6 +5,7 @@ import { CursorGlow } from "./effects/CursorGlow";
 import { Starfield } from "./background/Starfield";
 import { DeepSpaceBackdrop } from "./background/DeepSpaceBackdrop";
 import { SceneErrorBoundary } from "./SceneErrorBoundary";
+import { SceneControls } from "./controls/SceneControls";
 
 export function SceneCanvas() {
   const isAutomation = typeof navigator !== "undefined" && Boolean((navigator as any).webdriver);
@@ -25,12 +26,13 @@ export function SceneCanvas() {
           <pointLight position={[-6, 2, 4]} intensity={0.45} color="#2e8bff" />
 
           <Suspense fallback={null}>
-            <DeepSpaceBackdrop />
-            <Starfield />
-            <SceneDirector />
-          </Suspense>
-        </Canvas>
-      </SceneErrorBoundary>
+          <DeepSpaceBackdrop />
+          <Starfield />
+          <SceneDirector />
+          <SceneControls />
+        </Suspense>
+      </Canvas>
+    </SceneErrorBoundary>
 
       <CursorGlow />
     </div>
