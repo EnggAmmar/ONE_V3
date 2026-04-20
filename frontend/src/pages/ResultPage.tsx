@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import WizardShell from "../components/WizardShell";
 import { downloadMissionReport, solveMission, type MissionSolveResponse } from "../lib/api";
-import { useSceneStore } from "../store/sceneStore";
 import { requireMissionInput, useMission } from "../state/mission";
 
 export default function ResultPage() {
@@ -38,7 +37,6 @@ export default function ResultPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<MissionSolveResponse | null>(null);
-  const setSatellites = useSceneStore((s) => s.setSatellites);
 
   useEffect(() => {
     if (!input) return;
@@ -48,7 +46,6 @@ export default function ResultPage() {
       .then((r) => {
         if (!alive) return;
         setData(r);
-        setSatellites(r.constellation.satellites ?? null);
         setError(null);
       })
       .catch((e) => {
@@ -62,7 +59,7 @@ export default function ResultPage() {
     return () => {
       alive = false;
     };
-  }, [input, setSatellites]);
+  }, [input]);
 
   return (
     <WizardShell

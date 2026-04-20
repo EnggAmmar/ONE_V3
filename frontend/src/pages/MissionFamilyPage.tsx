@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { flushSync } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import WizardShell from "../components/WizardShell";
 import { getTaxonomy, type TaxonomyMissionFamily } from "../lib/api";
@@ -75,8 +76,10 @@ export default function MissionFamilyPage() {
             key={f.id}
             className="card"
             onClick={() => {
-              reset();
-              setFamily(f.id);
+              flushSync(() => {
+                reset();
+                setFamily(f.id);
+              });
               nav("/payload");
             }}
             type="button"

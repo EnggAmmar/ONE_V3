@@ -1,11 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
+import { flushSync } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import WizardShell from "../components/WizardShell";
 import { useMission } from "../state/mission";
+import { useSceneStore } from "../store/sceneStore";
+import { resolveCountry } from "../lib/geo/countryIndex";
 
 export default function RoiPage() {
   const nav = useNavigate();
   const { draft, setRoi } = useMission();
+  const setSelectedRegion = useSceneStore((s) => s.setSelectedRegion);
+  const setRegionQuery = useSceneStore((s) => s.setRegionQuery);
 
   useEffect(() => {
     if (!draft.family) {
@@ -22,6 +27,26 @@ export default function RoiPage() {
   const [query, setQuery] = useState<string>(() =>
     draft.roi?.type === "region" ? draft.roi.query : "",
   );
+
+  // Live preview for ROI step: highlight real country polygons when possible.
+  useEffect(() => {
+    if (global) {
+      setRegionQuery("");
+      setSelectedRegion(null);
+      return;
+    }
+
+    const q = query.trim();
+    setRegionQuery(q);
+
+    if (q.length < 2) {
+      setSelectedRegion(null);
+      return;
+    }
+
+    const match = resolveCountry(q);
+    setSelectedRegion(match ? { id: match.id, name: match.name, lat: match.lat, lon: match.lon } : null);
+  }, [global, query, setRegionQuery, setSelectedRegion]);
 
   return (
     <WizardShell
@@ -59,12 +84,12 @@ export default function RoiPage() {
           type="button"
           onClick={() => {
             if (global) {
-              setRoi({ type: "global" });
+              flushSync(() => setRoi({ type: "global" }));
               nav("/parameters");
               return;
             }
             if (query.trim().length < 2) return;
-            setRoi({ type: "region", query: query.trim() });
+            flushSync(() => setRoi({ type: "region", query: query.trim() }));
             nav("/parameters");
           }}
           disabled={!global && query.trim().length < 2}

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { flushSync } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import WizardShell from "../components/WizardShell";
 import { getTaxonomy, type PayloadSelection, type TaxonomyMissionFamily } from "../lib/api";
@@ -209,11 +210,12 @@ export default function PayloadPage() {
           onClick={() => {
             if (!selectedCategoryId) return;
             if (selectedCategoryId === "my_payload") {
-              setPayload(myPayload);
+              flushSync(() => setPayload(myPayload));
             } else {
               const opt = options.find((o) => o.categoryId === selectedCategoryId);
               if (!opt?.payloadId) return;
-              setPayload({ type: "catalog", payload_id: opt.payloadId });
+              const payloadId = opt.payloadId;
+              flushSync(() => setPayload({ type: "catalog", payload_id: payloadId }));
             }
             nav("/roi");
           }}

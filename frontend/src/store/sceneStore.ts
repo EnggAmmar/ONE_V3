@@ -1,35 +1,51 @@
 import { create } from "zustand";
+import type { MissionFamily, PayloadType, RegionSelection, SceneStep } from "../types/scene";
 
-export type SceneStep = "landing" | "payload" | "roi" | "parameters" | "result";
-
-export type SceneState = {
+type SceneStore = {
   step: SceneStep;
-  family: "remote_sensing" | "iot_communication" | "navigation" | null;
-  payloadType: "catalog" | "my_payload" | null;
-  roiType: "global" | "region" | null;
-  revisitHours: number | null;
-  satellites: number | null;
-  interactiveGlobe: boolean;
+  missionFamily: MissionFamily;
+  payloadType: PayloadType;
+  selectedRegion: RegionSelection;
+  regionQuery: string;
+
+  roiInteractionEnabled: boolean;
+  earthAutoRotate: boolean;
+  earthFocused: boolean;
+
   setStep: (step: SceneStep) => void;
-  setMission: (
-    next: Partial<Pick<SceneState, "family" | "payloadType" | "roiType" | "revisitHours">>,
-  ) => void;
-  setSatellites: (satellites: number | null) => void;
+  setMissionFamily: (missionFamily: MissionFamily) => void;
+  setPayloadType: (payloadType: PayloadType) => void;
+  setSelectedRegion: (region: RegionSelection) => void;
+  setRegionQuery: (query: string) => void;
+  setROIInteractionEnabled: (enabled: boolean) => void;
+  setEarthAutoRotate: (enabled: boolean) => void;
+  setEarthFocused: (focused: boolean) => void;
 };
 
-export const useSceneStore = create<SceneState>((set) => ({
-  step: "landing",
-  family: null,
+export const useSceneStore = create<SceneStore>((set) => ({
+  step: "missionType",
+  missionFamily: null,
   payloadType: null,
-  roiType: null,
-  revisitHours: null,
-  satellites: null,
-  interactiveGlobe: false,
+  selectedRegion: null,
+  regionQuery: "",
+
+  roiInteractionEnabled: false,
+  earthAutoRotate: true,
+  earthFocused: false,
+
   setStep: (step) =>
     set({
       step,
-      interactiveGlobe: step === "roi",
+      roiInteractionEnabled: step === "roi",
+      earthAutoRotate: true,
+      earthFocused: false,
     }),
-  setMission: (next) => set((s) => ({ ...s, ...next })),
-  setSatellites: (satellites) => set({ satellites }),
+
+  setMissionFamily: (missionFamily) => set({ missionFamily }),
+  setPayloadType: (payloadType) => set({ payloadType }),
+  setSelectedRegion: (selectedRegion) => set({ selectedRegion }),
+  setRegionQuery: (regionQuery) => set({ regionQuery }),
+  setROIInteractionEnabled: (roiInteractionEnabled) => set({ roiInteractionEnabled }),
+  setEarthAutoRotate: (earthAutoRotate) => set({ earthAutoRotate }),
+  setEarthFocused: (earthFocused) => set({ earthFocused }),
 }));

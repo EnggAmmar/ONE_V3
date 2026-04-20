@@ -1,40 +1,33 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import { Suspense } from "react";
-import { useSceneStore } from "../store/sceneStore";
-import SceneDirector from "./SceneDirector";
-import SceneWorld from "./SceneWorld";
+import { SceneDirector } from "./SceneDirector";
+import { CursorGlow } from "./effects/CursorGlow";
 
-export default function SceneCanvas() {
-  const interactiveGlobe = useSceneStore((s) => s.interactiveGlobe);
-
+export function SceneCanvas() {
+  const isAutomation = typeof navigator !== "undefined" && Boolean((navigator as any).webdriver);
   return (
-    <div className="sceneLayer" aria-hidden>
+    <div className="scene-root sceneLayer" aria-hidden>
       <Canvas
-        dpr={[1, 2]}
+        frameloop={isAutomation ? "demand" : "always"}
+        camera={{ position: [0, 0, 7], fov: 35 }}
         gl={{ antialias: true, alpha: true }}
-        camera={{ fov: 45, near: 0.1, far: 200, position: [0, 0, 10] }}
+        dpr={[1, 2]}
       >
-        <color attach="background" args={["#05070d"]} />
-        <fog attach="fog" args={["#05070d", 14, 60]} />
-        <ambientLight intensity={0.4} />
-        <directionalLight position={[10, 8, 6]} intensity={1.4} color="#bfe9ff" />
-        <directionalLight position={[-12, -4, -6]} intensity={0.45} color="#2aa7ff" />
+        <color attach="background" args={["#02060d"]} />
+        <fog attach="fog" args={["#02060d", 8, 20]} />
+
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[4, 4, 5]} intensity={1.5} color="#7fc8ff" />
+        <pointLight position={[-5, 2, 3]} intensity={0.75} color="#2da8ff" />
 
         <Suspense fallback={null}>
           <SceneDirector />
-          <SceneWorld />
         </Suspense>
-
-        <OrbitControls
-          enabled={interactiveGlobe}
-          enablePan={false}
-          enableZoom={false}
-          maxPolarAngle={Math.PI * 0.72}
-          minPolarAngle={Math.PI * 0.28}
-        />
       </Canvas>
+
+      <CursorGlow />
     </div>
   );
 }
 
+export default SceneCanvas;

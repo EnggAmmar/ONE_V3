@@ -4,7 +4,6 @@ import PayloadPage from "./pages/PayloadPage";
 import RoiPage from "./pages/RoiPage";
 import ParametersPage from "./pages/ParametersPage";
 import ResultPage from "./pages/ResultPage";
-import SceneBridge from "./scene/SceneBridge";
 import SceneCanvas from "./scene/SceneCanvas";
 import RouteTransition from "./ui/RouteTransition";
 
@@ -13,7 +12,6 @@ function RootLayout() {
     <div className="appRoot">
       <SceneCanvas />
       <div className="uiLayer">
-        <SceneBridge />
         <RouteTransition>
           <Outlet />
         </RouteTransition>

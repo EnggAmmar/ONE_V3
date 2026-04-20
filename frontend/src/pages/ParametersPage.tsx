@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { flushSync } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import WizardShell from "../components/WizardShell";
 import { useMission } from "../state/mission";
@@ -58,7 +59,7 @@ export default function ParametersPage() {
           className="btn btnPrimary"
           type="button"
           onClick={() => {
-            setRevisitHours(hours);
+            flushSync(() => setRevisitHours(hours));
             nav("/result");
           }}
         >

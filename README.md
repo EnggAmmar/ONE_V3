@@ -10,6 +10,10 @@ Mission-driven CubeSat / constellation configurator (FastAPI + React + OR-Tools 
    - Frontend: `http://localhost:3000`
    - Backend docs: `http://localhost:8000/docs`
 
+Troubleshooting:
+- Don’t browse to `http://0.0.0.0:...` (that’s a bind address). Use `http://localhost:3000`.
+- If Docker runs inside WSL and `localhost` doesn’t work, use your WSL IP (e.g. `http://<wsl-ip>:3000`).
+
 ## Local dev (without Docker)
 
 ### Backend
@@ -55,12 +59,18 @@ Lint / format:
 
 The UI is an overlay on top of a persistent WebGL scene:
 
-- Scene canvas: `frontend/src/scene/SceneCanvas.tsx` (react-three-fiber `Canvas`)
-- Scene world: `frontend/src/scene/SceneWorld.tsx` (stars, Earth, atmosphere, orbit rings, satellites)
-- Camera + step transitions: `frontend/src/scene/SceneDirector.tsx` (GSAP)
-- Route/state bridge: `frontend/src/scene/SceneBridge.tsx` (maps wizard route + mission draft into scene store)
-- Scene state: `frontend/src/store/sceneStore.ts` (Zustand)
-- UI route animation wrapper: `frontend/src/ui/RouteTransition.tsx`
+- Scene canvas root: `frontend/src/scene/SceneCanvas.tsx` (persistent react-three-fiber `Canvas`)
+- Pose + transitions: `frontend/src/scene/SceneDirector.tsx` (GSAP-driven camera/object staging)
+- Earth system hierarchy (single parent group):
+  - `frontend/src/scene/earth/EarthSystem.tsx`
+  - `frontend/src/scene/earth/EarthBase.tsx` (stylized atlas texture)
+  - `frontend/src/scene/earth/OrbitLayer.tsx` (orbits attached to Earth group)
+  - `frontend/src/scene/earth/RegionOverlay.tsx` + `frontend/src/scene/earth/ROIControls.tsx`
+- Satellite hero: `frontend/src/scene/satellite/SatelliteHero.tsx`
+- Cursor glow overlay: `frontend/src/scene/effects/CursorGlow.tsx`
+- Scene store/types: `frontend/src/store/sceneStore.ts`, `frontend/src/types/scene.ts`
+- Geo helpers: `frontend/src/lib/geo/geoUtils.ts`
+- Route → scene-store sync + left dock: `frontend/src/ui/RouteTransition.tsx`, `frontend/src/ui/LeftDock.tsx`
 
 ## Test matrix (CI-friendly)
 
