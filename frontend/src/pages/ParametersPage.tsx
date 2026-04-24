@@ -28,6 +28,7 @@ export default function ParametersPage() {
       title="Mission Parameters"
       subtitle="v1 uses revisit time to estimate constellation size and drive trade-offs."
       backTo="/roi"
+      testId="page-parameters"
     >
       <div className="form">
         <label>

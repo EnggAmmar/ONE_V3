@@ -109,6 +109,7 @@ export default function PayloadPage() {
       title="Select Payload"
       subtitle="Pick a representative payload or use My Payload for confidential inputs."
       backTo="/"
+      testId="page-payload"
     >
       {loading ? <div className="muted">Loading options...</div> : null}
       <div className="grid">

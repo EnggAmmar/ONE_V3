@@ -12,8 +12,7 @@ Push-Location "frontend"
 npm run lint
 npm run test
 npm run build
-npx playwright test
+npm run test:e2e
 Pop-Location
 
 Write-Host "CI checks complete."
-

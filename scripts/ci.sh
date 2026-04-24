@@ -14,8 +14,7 @@ echo "== Frontend =="
   npm run lint
   npm run test
   npm run build
-  npx playwright test
+  npm run test:e2e
 )
 
 echo "CI checks complete."
-

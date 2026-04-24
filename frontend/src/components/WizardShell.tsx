@@ -6,14 +6,16 @@ export default function WizardShell({
   subtitle,
   children,
   backTo,
+  testId,
 }: {
   title: string;
   subtitle?: string;
   children: ReactNode;
   backTo?: string;
+  testId?: string;
 }) {
   return (
-    <div className="wizard">
+    <div className="wizard" data-testid={testId}>
       <div className="wizardHeader">
         <div className="brand">
           <div className="mark" aria-hidden />
@@ -42,4 +44,3 @@ export default function WizardShell({
     </div>
   );
 }
-

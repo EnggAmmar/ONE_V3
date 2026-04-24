@@ -37,6 +37,9 @@ Lint / format:
 - `npm install`
 - `npm run dev`
 
+Typecheck:
+- `npm run typecheck`
+
 Unit tests (Vitest):
 - `npm run test`
 
@@ -80,9 +83,10 @@ Backend:
 
 Frontend:
 - Lint: `cd frontend && npm run lint`
+- Typecheck: `cd frontend && npm run typecheck`
 - Unit (Vitest): `cd frontend && npm run test`
 - Build: `cd frontend && npm run build`
-- E2E (Playwright, mocked backend by default): `cd frontend && npx playwright test`
+- E2E (Playwright, mocked backend by default): `cd frontend && npm run test:e2e`
 - E2E (Playwright, full stack): `cd frontend && npm run test:e2e:docker`
 
 One-command CI runs:

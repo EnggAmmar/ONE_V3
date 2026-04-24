@@ -19,7 +19,6 @@ frontend-build:
 	cd frontend && npm run build
 
 frontend-e2e:
-	cd frontend && npx playwright test
+	cd frontend && npm run test:e2e
 
 test: backend-lint backend-test frontend-lint frontend-test frontend-build frontend-e2e
-

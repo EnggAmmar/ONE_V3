@@ -72,6 +72,7 @@ export default function ResultPage() {
       title="Your Constellation"
       subtitle="An explainable v1 solution: constellation estimate + CP-SAT subsystem selection."
       backTo="/parameters"
+      testId="page-result"
     >
       {loading ? <div className="muted">Solving...</div> : null}
       {error ? <div className="error">Solve error: {error}</div> : null}

@@ -53,6 +53,7 @@ export default function RoiPage() {
       title="Region of Interest"
       subtitle="Start simple: global coverage or a region query string. (Map UI comes next.)"
       backTo="/payload"
+      testId="page-roi"
     >
       <div className="form">
         <label className="toggleRow">

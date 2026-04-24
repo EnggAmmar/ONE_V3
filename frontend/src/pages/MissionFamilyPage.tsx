@@ -68,6 +68,7 @@ export default function MissionFamilyPage() {
     <WizardShell
       title="Select Mission Family"
       subtitle="Start from mission intent. The backend derives requirements and selects a feasible subsystem set."
+      testId="page-mission-family"
     >
       {loading ? <div className="muted">Loading options...</div> : null}
       <div className="grid">
