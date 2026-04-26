@@ -1,0 +1,2441 @@
+{
+  "mission_family": "Remote Sensing",
+  "block": "MASTER_DATABASE",
+  "schema_version": "ONE_V3_PAYLOAD_DB_2.1",
+  "dimension_convention": {
+    "length_x": "payload longitudinal axis in mm",
+    "width_y": "payload lateral axis in mm",
+    "height_z": "payload stack depth / protrusion axis in mm"
+  },
+  "variants": [
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Optical Imaging",
+      "payload_variant": "Visible Light Cameras",
+      "products": [
+        {
+          "payload_id": "RS-EO-VIS-001",
+          "vendor": "Simera Sense",
+          "product_name": "TriScape100",
+          "mass_kg": 1.1,
+          "dimensions_mm": {
+            "length_x": 98,
+            "width_y": 98,
+            "height_z": 176
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 2.5,
+          "peak_power_w": 5.8,
+          "nominal_data_rate_mbps": 95,
+          "spectral_band": "VIS RGB",
+          "ground_resolution_m": 4.75,
+          "swath_km": 19.4,
+          "pointing_requirement_deg": 0.1,
+          "estimated_cost_usd": 180000
+        },
+        {
+          "payload_id": "RS-EO-VIS-002",
+          "vendor": "Satlantis",
+          "product_name": "iSIM-90",
+          "mass_kg": 1.5,
+          "dimensions_mm": {
+            "length_x": 95,
+            "width_y": 96,
+            "height_z": 131
+          },
+          "payload_envelope_u": 1.2,
+          "mounting_face": "nadir",
+          "avg_power_w": 8.0,
+          "peak_power_w": 12.0,
+          "nominal_data_rate_mbps": 120,
+          "spectral_band": "VIS RGB",
+          "ground_resolution_m": 1.5,
+          "swath_km": 12,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 220000
+        },
+        {
+          "payload_id": "RS-EO-VIS-003",
+          "vendor": "Satlantis",
+          "product_name": "iSIM-170",
+          "mass_kg": 4.2,
+          "dimensions_mm": {
+            "length_x": 170,
+            "width_y": 170,
+            "height_z": 220
+          },
+          "payload_envelope_u": 6.0,
+          "mounting_face": "nadir",
+          "avg_power_w": 15,
+          "peak_power_w": 22,
+          "nominal_data_rate_mbps": 180,
+          "spectral_band": "VIS RGB",
+          "ground_resolution_m": 0.9,
+          "swath_km": 14,
+          "pointing_requirement_deg": 0.05,
+          "estimated_cost_usd": 480000
+        },
+        {
+          "payload_id": "RS-EO-VIS-004",
+          "vendor": "Dragonfly Aerospace",
+          "product_name": "Gecko Imager",
+          "mass_kg": 1.9,
+          "dimensions_mm": {
+            "length_x": 98,
+            "width_y": 98,
+            "height_z": 145
+          },
+          "payload_envelope_u": 1.4,
+          "mounting_face": "nadir",
+          "avg_power_w": 8.5,
+          "peak_power_w": 12,
+          "nominal_data_rate_mbps": 110,
+          "spectral_band": "VIS",
+          "ground_resolution_m": 4.0,
+          "swath_km": 35,
+          "pointing_requirement_deg": 0.1,
+          "estimated_cost_usd": 175000
+        },
+        {
+          "payload_id": "RS-EO-VIS-005",
+          "vendor": "Open Cosmos",
+          "product_name": "HAMMER EO Camera",
+          "mass_kg": 1.8,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 150
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 9,
+          "peak_power_w": 14,
+          "nominal_data_rate_mbps": 95,
+          "spectral_band": "VIS",
+          "ground_resolution_m": 5.0,
+          "swath_km": 30,
+          "pointing_requirement_deg": 0.12,
+          "estimated_cost_usd": 160000
+        },
+        {
+          "payload_id": "RS-EO-VIS-006",
+          "vendor": "AAC Clyde Space",
+          "product_name": "xCAM EO Payload",
+          "mass_kg": 1.2,
+          "dimensions_mm": {
+            "length_x": 90,
+            "width_y": 90,
+            "height_z": 120
+          },
+          "payload_envelope_u": 1.0,
+          "mounting_face": "nadir",
+          "avg_power_w": 6.2,
+          "peak_power_w": 9,
+          "nominal_data_rate_mbps": 85,
+          "spectral_band": "VIS",
+          "ground_resolution_m": 6.0,
+          "swath_km": 28,
+          "pointing_requirement_deg": 0.15,
+          "estimated_cost_usd": 130000
+        },
+        {
+          "payload_id": "RS-EO-VIS-007",
+          "vendor": "NanoAvionics",
+          "product_name": "NanoCam EO",
+          "mass_kg": 1.4,
+          "dimensions_mm": {
+            "length_x": 92,
+            "width_y": 92,
+            "height_z": 130
+          },
+          "payload_envelope_u": 1.1,
+          "mounting_face": "nadir",
+          "avg_power_w": 6.8,
+          "peak_power_w": 10,
+          "nominal_data_rate_mbps": 88,
+          "spectral_band": "VIS",
+          "ground_resolution_m": 5.7,
+          "swath_km": 27,
+          "pointing_requirement_deg": 0.13,
+          "estimated_cost_usd": 140000
+        },
+        {
+          "payload_id": "RS-EO-VIS-008",
+          "vendor": "Berlin Space Technologies",
+          "product_name": "BST Optical Camera",
+          "mass_kg": 1.6,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 140
+          },
+          "payload_envelope_u": 1.4,
+          "mounting_face": "nadir",
+          "avg_power_w": 7.8,
+          "peak_power_w": 11,
+          "nominal_data_rate_mbps": 90,
+          "spectral_band": "VIS",
+          "ground_resolution_m": 5.3,
+          "swath_km": 29,
+          "pointing_requirement_deg": 0.12,
+          "estimated_cost_usd": 145000
+        },
+        {
+          "payload_id": "RS-EO-VIS-009",
+          "vendor": "XCAM",
+          "product_name": "C3D CubeSat Camera",
+          "mass_kg": 0.82,
+          "dimensions_mm": {
+            "length_x": 75,
+            "width_y": 75,
+            "height_z": 85
+          },
+          "payload_envelope_u": 0.7,
+          "mounting_face": "nadir",
+          "avg_power_w": 4.5,
+          "peak_power_w": 6.5,
+          "nominal_data_rate_mbps": 60,
+          "spectral_band": "VIS",
+          "ground_resolution_m": 8.0,
+          "swath_km": 34,
+          "pointing_requirement_deg": 0.2,
+          "estimated_cost_usd": 85000
+        },
+        {
+          "payload_id": "RS-EO-VIS-010",
+          "vendor": "EnduroSat",
+          "product_name": "CubeCam-V",
+          "mass_kg": 0.9,
+          "dimensions_mm": {
+            "length_x": 80,
+            "width_y": 80,
+            "height_z": 90
+          },
+          "payload_envelope_u": 0.8,
+          "mounting_face": "nadir",
+          "avg_power_w": 4.9,
+          "peak_power_w": 7,
+          "nominal_data_rate_mbps": 65,
+          "spectral_band": "VIS",
+          "ground_resolution_m": 7.5,
+          "swath_km": 30,
+          "pointing_requirement_deg": 0.18,
+          "estimated_cost_usd": 90000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Optical Imaging",
+      "payload_variant": "Panchromatic Cameras",
+      "products": [
+        {
+          "payload_id": "RS-EO-PAN-001",
+          "vendor": "Simera Sense",
+          "product_name": "MultiScape100 PAN",
+          "mass_kg": 1.26,
+          "dimensions_mm": {
+            "length_x": 98,
+            "width_y": 98,
+            "height_z": 176
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 3.25,
+          "peak_power_w": 7.0,
+          "nominal_data_rate_mbps": 100,
+          "spectral_band": "500-750nm PAN",
+          "ground_resolution_m": 4.75,
+          "swath_km": 19.4,
+          "pointing_requirement_deg": 0.1,
+          "estimated_cost_usd": 185000
+        },
+        {
+          "payload_id": "RS-EO-PAN-002",
+          "vendor": "Satlantis",
+          "product_name": "iSIM-170 PAN",
+          "mass_kg": 4.3,
+          "dimensions_mm": {
+            "length_x": 170,
+            "width_y": 170,
+            "height_z": 220
+          },
+          "payload_envelope_u": 6.0,
+          "mounting_face": "nadir",
+          "avg_power_w": 15,
+          "peak_power_w": 22,
+          "nominal_data_rate_mbps": 180,
+          "spectral_band": "PAN",
+          "ground_resolution_m": 0.8,
+          "swath_km": 13,
+          "pointing_requirement_deg": 0.05,
+          "estimated_cost_usd": 500000
+        },
+        {
+          "payload_id": "RS-EO-PAN-003",
+          "vendor": "Dragonfly Aerospace",
+          "product_name": "PanoEye",
+          "mass_kg": 1.8,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 145
+          },
+          "payload_envelope_u": 1.4,
+          "mounting_face": "nadir",
+          "avg_power_w": 8.4,
+          "peak_power_w": 12,
+          "nominal_data_rate_mbps": 112,
+          "spectral_band": "PAN",
+          "ground_resolution_m": 3.7,
+          "swath_km": 36,
+          "pointing_requirement_deg": 0.09,
+          "estimated_cost_usd": 190000
+        },
+        {
+          "payload_id": "RS-EO-PAN-004",
+          "vendor": "Open Cosmos",
+          "product_name": "PAN Observation Payload",
+          "mass_kg": 1.7,
+          "dimensions_mm": {
+            "length_x": 95,
+            "width_y": 95,
+            "height_z": 140
+          },
+          "payload_envelope_u": 1.3,
+          "mounting_face": "nadir",
+          "avg_power_w": 8.0,
+          "peak_power_w": 11,
+          "nominal_data_rate_mbps": 96,
+          "spectral_band": "PAN",
+          "ground_resolution_m": 4.8,
+          "swath_km": 30,
+          "pointing_requirement_deg": 0.11,
+          "estimated_cost_usd": 170000
+        },
+        {
+          "payload_id": "RS-EO-PAN-005",
+          "vendor": "AAC Clyde Space",
+          "product_name": "PANCam",
+          "mass_kg": 1.3,
+          "dimensions_mm": {
+            "length_x": 90,
+            "width_y": 90,
+            "height_z": 120
+          },
+          "payload_envelope_u": 1.0,
+          "mounting_face": "nadir",
+          "avg_power_w": 6.5,
+          "peak_power_w": 9.2,
+          "nominal_data_rate_mbps": 83,
+          "spectral_band": "PAN",
+          "ground_resolution_m": 5.9,
+          "swath_km": 29,
+          "pointing_requirement_deg": 0.14,
+          "estimated_cost_usd": 135000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Infrared Imaging",
+      "payload_variant": "NIR Sensors",
+      "products": [
+        {
+          "payload_id": "RS-EO-NIR-001",
+          "vendor": "Simera Sense",
+          "product_name": "MultiScape100 NIR",
+          "mass_kg": 1.26,
+          "dimensions_mm": {
+            "length_x": 98,
+            "width_y": 98,
+            "height_z": 176
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 3.25,
+          "peak_power_w": 7.0,
+          "nominal_data_rate_mbps": 100,
+          "spectral_band": "700-1000nm",
+          "ground_resolution_m": 4.9,
+          "swath_km": 19.4,
+          "pointing_requirement_deg": 0.1,
+          "estimated_cost_usd": 195000
+        },
+        {
+          "payload_id": "RS-EO-NIR-002",
+          "vendor": "Satlantis",
+          "product_name": "iSIM-NIR",
+          "mass_kg": 1.7,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 140
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 8.8,
+          "peak_power_w": 12.5,
+          "nominal_data_rate_mbps": 118,
+          "spectral_band": "700-950nm",
+          "ground_resolution_m": 2.2,
+          "swath_km": 18,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 240000
+        },
+        {
+          "payload_id": "RS-EO-NIR-003",
+          "vendor": "Dragonfly Aerospace",
+          "product_name": "NIR Gecko",
+          "mass_kg": 2.0,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 150
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 9,
+          "peak_power_w": 13,
+          "nominal_data_rate_mbps": 115,
+          "spectral_band": "700-1050nm",
+          "ground_resolution_m": 4.2,
+          "swath_km": 34,
+          "pointing_requirement_deg": 0.09,
+          "estimated_cost_usd": 205000
+        },
+        {
+          "payload_id": "RS-EO-NIR-004",
+          "vendor": "Open Cosmos",
+          "product_name": "NIR Observation Module",
+          "mass_kg": 1.6,
+          "dimensions_mm": {
+            "length_x": 95,
+            "width_y": 95,
+            "height_z": 135
+          },
+          "payload_envelope_u": 1.3,
+          "mounting_face": "nadir",
+          "avg_power_w": 8.2,
+          "peak_power_w": 11.5,
+          "nominal_data_rate_mbps": 94,
+          "spectral_band": "750-980nm",
+          "ground_resolution_m": 5.4,
+          "swath_km": 28,
+          "pointing_requirement_deg": 0.11,
+          "estimated_cost_usd": 175000
+        },
+        {
+          "payload_id": "RS-EO-NIR-005",
+          "vendor": "XCAM",
+          "product_name": "C3D NIR",
+          "mass_kg": 0.88,
+          "dimensions_mm": {
+            "length_x": 76,
+            "width_y": 76,
+            "height_z": 88
+          },
+          "payload_envelope_u": 0.8,
+          "mounting_face": "nadir",
+          "avg_power_w": 4.8,
+          "peak_power_w": 6.9,
+          "nominal_data_rate_mbps": 61,
+          "spectral_band": "700-900nm",
+          "ground_resolution_m": 8.0,
+          "swath_km": 32,
+          "pointing_requirement_deg": 0.18,
+          "estimated_cost_usd": 93000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Infrared Imaging",
+      "payload_variant": "SWIR Sensors",
+      "products": [
+        {
+          "payload_id": "RS-EO-SWIR-001",
+          "vendor": "Satlantis",
+          "product_name": "iSIM-SWIR",
+          "mass_kg": 2.2,
+          "dimensions_mm": {
+            "length_x": 110,
+            "width_y": 110,
+            "height_z": 150
+          },
+          "payload_envelope_u": 2.0,
+          "mounting_face": "nadir",
+          "avg_power_w": 11,
+          "peak_power_w": 16,
+          "nominal_data_rate_mbps": 125,
+          "spectral_band": "1000-1700nm",
+          "ground_resolution_m": 3.0,
+          "swath_km": 18,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 320000
+        },
+        {
+          "payload_id": "RS-EO-SWIR-002",
+          "vendor": "Dragonfly Aerospace",
+          "product_name": "SWIR Gecko",
+          "mass_kg": 2.5,
+          "dimensions_mm": {
+            "length_x": 110,
+            "width_y": 110,
+            "height_z": 160
+          },
+          "payload_envelope_u": 2.2,
+          "mounting_face": "nadir",
+          "avg_power_w": 11.8,
+          "peak_power_w": 17,
+          "nominal_data_rate_mbps": 130,
+          "spectral_band": "900-1700nm",
+          "ground_resolution_m": 3.5,
+          "swath_km": 20,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 335000
+        },
+        {
+          "payload_id": "RS-EO-SWIR-003",
+          "vendor": "GHGSat Heritage",
+          "product_name": "SWIR Methane Imager",
+          "mass_kg": 5.5,
+          "dimensions_mm": {
+            "length_x": 160,
+            "width_y": 160,
+            "height_z": 220
+          },
+          "payload_envelope_u": 5.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 18,
+          "peak_power_w": 25,
+          "nominal_data_rate_mbps": 190,
+          "spectral_band": "1600-1700nm",
+          "ground_resolution_m": 25,
+          "swath_km": 12,
+          "pointing_requirement_deg": 0.05,
+          "estimated_cost_usd": 650000
+        },
+        {
+          "payload_id": "RS-EO-SWIR-004",
+          "vendor": "Specim OEM Space",
+          "product_name": "SWIR Pushbroom Module",
+          "mass_kg": 2.8,
+          "dimensions_mm": {
+            "length_x": 120,
+            "width_y": 120,
+            "height_z": 170
+          },
+          "payload_envelope_u": 2.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 12.5,
+          "peak_power_w": 18,
+          "nominal_data_rate_mbps": 145,
+          "spectral_band": "1000-2500nm",
+          "ground_resolution_m": 6.0,
+          "swath_km": 18,
+          "pointing_requirement_deg": 0.07,
+          "estimated_cost_usd": 350000
+        },
+        {
+          "payload_id": "RS-EO-SWIR-005",
+          "vendor": "EnduroSat OEM",
+          "product_name": "CubeCam-SWIR",
+          "mass_kg": 1.85,
+          "dimensions_mm": {
+            "length_x": 95,
+            "width_y": 95,
+            "height_z": 135
+          },
+          "payload_envelope_u": 1.3,
+          "mounting_face": "nadir",
+          "avg_power_w": 9.1,
+          "peak_power_w": 13.5,
+          "nominal_data_rate_mbps": 110,
+          "spectral_band": "1000-1600nm",
+          "ground_resolution_m": 5.4,
+          "swath_km": 18,
+          "pointing_requirement_deg": 0.1,
+          "estimated_cost_usd": 245000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Infrared Imaging",
+      "payload_variant": "MWIR Sensors",
+      "products": [
+        {
+          "payload_id": "RS-EO-MWIR-001",
+          "vendor": "Dragonfly Aerospace",
+          "product_name": "MWIR Gecko",
+          "mass_kg": 2.8,
+          "dimensions_mm": {
+            "length_x": 120,
+            "width_y": 120,
+            "height_z": 165
+          },
+          "payload_envelope_u": 2.3,
+          "mounting_face": "nadir",
+          "avg_power_w": 13,
+          "peak_power_w": 18,
+          "nominal_data_rate_mbps": 135,
+          "spectral_band": "3000-5000nm",
+          "ground_resolution_m": 4.0,
+          "swath_km": 18,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 390000
+        },
+        {
+          "payload_id": "RS-EO-MWIR-002",
+          "vendor": "Satlantis OEM",
+          "product_name": "MWIR Observation Payload",
+          "mass_kg": 2.6,
+          "dimensions_mm": {
+            "length_x": 115,
+            "width_y": 115,
+            "height_z": 160
+          },
+          "payload_envelope_u": 2.1,
+          "mounting_face": "nadir",
+          "avg_power_w": 12.5,
+          "peak_power_w": 17,
+          "nominal_data_rate_mbps": 128,
+          "spectral_band": "3200-4800nm",
+          "ground_resolution_m": 4.5,
+          "swath_km": 19,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 370000
+        },
+        {
+          "payload_id": "RS-EO-MWIR-003",
+          "vendor": "Specim OEM Space",
+          "product_name": "MWIR Imaging Module",
+          "mass_kg": 3.1,
+          "dimensions_mm": {
+            "length_x": 125,
+            "width_y": 125,
+            "height_z": 175
+          },
+          "payload_envelope_u": 2.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 14,
+          "peak_power_w": 19,
+          "nominal_data_rate_mbps": 142,
+          "spectral_band": "3000-5000nm",
+          "ground_resolution_m": 5.0,
+          "swath_km": 17,
+          "pointing_requirement_deg": 0.07,
+          "estimated_cost_usd": 420000
+        },
+        {
+          "payload_id": "RS-EO-MWIR-004",
+          "vendor": "Open Cosmos OEM",
+          "product_name": "MWIR Thermal Mapper",
+          "mass_kg": 2.4,
+          "dimensions_mm": {
+            "length_x": 110,
+            "width_y": 110,
+            "height_z": 155
+          },
+          "payload_envelope_u": 2.0,
+          "mounting_face": "nadir",
+          "avg_power_w": 11.8,
+          "peak_power_w": 16.5,
+          "nominal_data_rate_mbps": 122,
+          "spectral_band": "3100-4700nm",
+          "ground_resolution_m": 5.2,
+          "swath_km": 18,
+          "pointing_requirement_deg": 0.09,
+          "estimated_cost_usd": 345000
+        },
+        {
+          "payload_id": "RS-EO-MWIR-005",
+          "vendor": "EnduroSat OEM",
+          "product_name": "CubeMWIR",
+          "mass_kg": 2.1,
+          "dimensions_mm": {
+            "length_x": 105,
+            "width_y": 105,
+            "height_z": 145
+          },
+          "payload_envelope_u": 1.8,
+          "mounting_face": "nadir",
+          "avg_power_w": 10.9,
+          "peak_power_w": 15,
+          "nominal_data_rate_mbps": 116,
+          "spectral_band": "3000-5000nm",
+          "ground_resolution_m": 5.8,
+          "swath_km": 20,
+          "pointing_requirement_deg": 0.1,
+          "estimated_cost_usd": 310000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Infrared Imaging",
+      "payload_variant": "LWIR Sensors",
+      "products": [
+        {
+          "payload_id": "RS-EO-LWIR-001",
+          "vendor": "FLIR Space Adapted",
+          "product_name": "Tau2 LWIR Payload",
+          "mass_kg": 1.9,
+          "dimensions_mm": {
+            "length_x": 95,
+            "width_y": 95,
+            "height_z": 130
+          },
+          "payload_envelope_u": 1.3,
+          "mounting_face": "nadir",
+          "avg_power_w": 8.2,
+          "peak_power_w": 12,
+          "nominal_data_rate_mbps": 88,
+          "spectral_band": "8000-14000nm",
+          "ground_resolution_m": 8.0,
+          "swath_km": 22,
+          "pointing_requirement_deg": 0.11,
+          "estimated_cost_usd": 185000
+        },
+        {
+          "payload_id": "RS-EO-LWIR-002",
+          "vendor": "Dragonfly Aerospace",
+          "product_name": "LWIR Gecko",
+          "mass_kg": 2.2,
+          "dimensions_mm": {
+            "length_x": 105,
+            "width_y": 105,
+            "height_z": 145
+          },
+          "payload_envelope_u": 1.8,
+          "mounting_face": "nadir",
+          "avg_power_w": 9.4,
+          "peak_power_w": 13,
+          "nominal_data_rate_mbps": 98,
+          "spectral_band": "8000-12000nm",
+          "ground_resolution_m": 7.2,
+          "swath_km": 20,
+          "pointing_requirement_deg": 0.1,
+          "estimated_cost_usd": 220000
+        },
+        {
+          "payload_id": "RS-EO-LWIR-003",
+          "vendor": "Open Cosmos OEM",
+          "product_name": "LWIR Heat Mapper",
+          "mass_kg": 2.0,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 138
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 8.8,
+          "peak_power_w": 12.2,
+          "nominal_data_rate_mbps": 92,
+          "spectral_band": "8000-14000nm",
+          "ground_resolution_m": 7.8,
+          "swath_km": 21,
+          "pointing_requirement_deg": 0.1,
+          "estimated_cost_usd": 205000
+        },
+        {
+          "payload_id": "RS-EO-LWIR-004",
+          "vendor": "AAC Clyde Space OEM",
+          "product_name": "ThermalCube LWIR",
+          "mass_kg": 1.85,
+          "dimensions_mm": {
+            "length_x": 95,
+            "width_y": 95,
+            "height_z": 132
+          },
+          "payload_envelope_u": 1.3,
+          "mounting_face": "nadir",
+          "avg_power_w": 8.0,
+          "peak_power_w": 11.5,
+          "nominal_data_rate_mbps": 86,
+          "spectral_band": "8000-13500nm",
+          "ground_resolution_m": 8.5,
+          "swath_km": 20,
+          "pointing_requirement_deg": 0.11,
+          "estimated_cost_usd": 178000
+        },
+        {
+          "payload_id": "RS-EO-LWIR-005",
+          "vendor": "EnduroSat OEM",
+          "product_name": "CubeTherm-LWIR",
+          "mass_kg": 1.7,
+          "dimensions_mm": {
+            "length_x": 90,
+            "width_y": 90,
+            "height_z": 125
+          },
+          "payload_envelope_u": 1.2,
+          "mounting_face": "nadir",
+          "avg_power_w": 7.5,
+          "peak_power_w": 10.8,
+          "nominal_data_rate_mbps": 82,
+          "spectral_band": "8000-14000nm",
+          "ground_resolution_m": 9.0,
+          "swath_km": 23,
+          "pointing_requirement_deg": 0.12,
+          "estimated_cost_usd": 165000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Spectral Imaging",
+      "payload_variant": "Hyperspectral Imagers",
+      "products": [
+        {
+          "payload_id": "RS-EO-HSI-001",
+          "vendor": "Simera Sense",
+          "product_name": "HyperScape100",
+          "mass_kg": 1.35,
+          "dimensions_mm": {
+            "length_x": 98,
+            "width_y": 98,
+            "height_z": 176
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 4.0,
+          "peak_power_w": 8.5,
+          "nominal_data_rate_mbps": 140,
+          "spectral_band": "450-900nm hyperspectral",
+          "ground_resolution_m": 9.0,
+          "swath_km": 23,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 260000
+        },
+        {
+          "payload_id": "RS-EO-HSI-002",
+          "vendor": "Aalto Heritage",
+          "product_name": "AaSI Derived Payload",
+          "mass_kg": 2.0,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 180
+          },
+          "payload_envelope_u": 2.0,
+          "mounting_face": "nadir",
+          "avg_power_w": 10,
+          "peak_power_w": 14,
+          "nominal_data_rate_mbps": 150,
+          "spectral_band": "500-900nm hyperspectral",
+          "ground_resolution_m": 10.0,
+          "swath_km": 10,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 280000
+        },
+        {
+          "payload_id": "RS-EO-HSI-003",
+          "vendor": "Specim Space OEM",
+          "product_name": "VNIR Pushbroom HSI",
+          "mass_kg": 2.6,
+          "dimensions_mm": {
+            "length_x": 120,
+            "width_y": 120,
+            "height_z": 185
+          },
+          "payload_envelope_u": 2.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 12.5,
+          "peak_power_w": 17,
+          "nominal_data_rate_mbps": 165,
+          "spectral_band": "400-1000nm",
+          "ground_resolution_m": 8.0,
+          "swath_km": 20,
+          "pointing_requirement_deg": 0.07,
+          "estimated_cost_usd": 340000
+        },
+        {
+          "payload_id": "RS-EO-HSI-004",
+          "vendor": "Satlantis OEM",
+          "product_name": "HSI Observation Payload",
+          "mass_kg": 2.3,
+          "dimensions_mm": {
+            "length_x": 110,
+            "width_y": 110,
+            "height_z": 175
+          },
+          "payload_envelope_u": 2.2,
+          "mounting_face": "nadir",
+          "avg_power_w": 11,
+          "peak_power_w": 15.5,
+          "nominal_data_rate_mbps": 158,
+          "spectral_band": "450-950nm",
+          "ground_resolution_m": 7.5,
+          "swath_km": 18,
+          "pointing_requirement_deg": 0.07,
+          "estimated_cost_usd": 310000
+        },
+        {
+          "payload_id": "RS-EO-HSI-005",
+          "vendor": "EnduroSat OEM",
+          "product_name": "CubeHyper",
+          "mass_kg": 1.95,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 165
+          },
+          "payload_envelope_u": 1.8,
+          "mounting_face": "nadir",
+          "avg_power_w": 9.5,
+          "peak_power_w": 13.5,
+          "nominal_data_rate_mbps": 148,
+          "spectral_band": "450-900nm",
+          "ground_resolution_m": 9.5,
+          "swath_km": 19,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 255000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Synthetic Aperture Radar",
+      "payload_variant": "X-Band SAR",
+      "products": [
+        {
+          "payload_id": "RS-EO-XSAR-001",
+          "vendor": "ICEYE Heritage",
+          "product_name": "Compact X-SAR",
+          "mass_kg": 18.0,
+          "dimensions_mm": {
+            "length_x": 300,
+            "width_y": 200,
+            "height_z": 450
+          },
+          "payload_envelope_u": 12.0,
+          "mounting_face": "side_deploy",
+          "avg_power_w": 45,
+          "peak_power_w": 95,
+          "nominal_data_rate_mbps": 320,
+          "spectral_band": "X-Band 9.65GHz",
+          "ground_resolution_m": 1.0,
+          "swath_km": 30,
+          "pointing_requirement_deg": 0.03,
+          "estimated_cost_usd": 1500000
+        },
+        {
+          "payload_id": "RS-EO-XSAR-002",
+          "vendor": "Umbra Heritage",
+          "product_name": "Mini X-Band SAR",
+          "mass_kg": 16.5,
+          "dimensions_mm": {
+            "length_x": 280,
+            "width_y": 200,
+            "height_z": 420
+          },
+          "payload_envelope_u": 10.5,
+          "mounting_face": "side_deploy",
+          "avg_power_w": 42,
+          "peak_power_w": 88,
+          "nominal_data_rate_mbps": 300,
+          "spectral_band": "X-Band 9.6GHz",
+          "ground_resolution_m": 0.9,
+          "swath_km": 28,
+          "pointing_requirement_deg": 0.03,
+          "estimated_cost_usd": 1380000
+        },
+        {
+          "payload_id": "RS-EO-XSAR-003",
+          "vendor": "Capella Heritage",
+          "product_name": "X-SAR Compact",
+          "mass_kg": 19.0,
+          "dimensions_mm": {
+            "length_x": 310,
+            "width_y": 210,
+            "height_z": 460
+          },
+          "payload_envelope_u": 12.0,
+          "mounting_face": "side_deploy",
+          "avg_power_w": 48,
+          "peak_power_w": 100,
+          "nominal_data_rate_mbps": 340,
+          "spectral_band": "X-Band",
+          "ground_resolution_m": 0.5,
+          "swath_km": 25,
+          "pointing_requirement_deg": 0.02,
+          "estimated_cost_usd": 1600000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Synthetic Aperture Radar",
+      "payload_variant": "C-Band SAR",
+      "products": [
+        {
+          "payload_id": "RS-EO-CSAR-001",
+          "vendor": "Airbus Heritage",
+          "product_name": "Mini C-SAR",
+          "mass_kg": 22.0,
+          "dimensions_mm": {
+            "length_x": 320,
+            "width_y": 220,
+            "height_z": 480
+          },
+          "payload_envelope_u": 14.0,
+          "mounting_face": "side_deploy",
+          "avg_power_w": 52,
+          "peak_power_w": 110,
+          "nominal_data_rate_mbps": 350,
+          "spectral_band": "C-Band 5.4GHz",
+          "ground_resolution_m": 2.0,
+          "swath_km": 40,
+          "pointing_requirement_deg": 0.03,
+          "estimated_cost_usd": 1750000
+        },
+        {
+          "payload_id": "RS-EO-CSAR-002",
+          "vendor": "Thales Heritage",
+          "product_name": "Compact C-Band Mapper",
+          "mass_kg": 20.0,
+          "dimensions_mm": {
+            "length_x": 300,
+            "width_y": 210,
+            "height_z": 450
+          },
+          "payload_envelope_u": 12.5,
+          "mounting_face": "side_deploy",
+          "avg_power_w": 48,
+          "peak_power_w": 102,
+          "nominal_data_rate_mbps": 330,
+          "spectral_band": "C-Band",
+          "ground_resolution_m": 2.5,
+          "swath_km": 42,
+          "pointing_requirement_deg": 0.03,
+          "estimated_cost_usd": 1620000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Synthetic Aperture Radar",
+      "payload_variant": "L-Band SAR",
+      "products": [
+        {
+          "payload_id": "RS-EO-LSAR-001",
+          "vendor": "JAXA Heritage",
+          "product_name": "Compact L-SAR Mapper",
+          "mass_kg": 28.0,
+          "dimensions_mm": {
+            "length_x": 360,
+            "width_y": 240,
+            "height_z": 520
+          },
+          "payload_envelope_u": 16.0,
+          "mounting_face": "side_deploy",
+          "avg_power_w": 65,
+          "peak_power_w": 135,
+          "nominal_data_rate_mbps": 390,
+          "spectral_band": "L-Band 1.2GHz",
+          "ground_resolution_m": 5.0,
+          "swath_km": 55,
+          "pointing_requirement_deg": 0.025,
+          "estimated_cost_usd": 2200000
+        },
+        {
+          "payload_id": "RS-EO-LSAR-002",
+          "vendor": "Airbus Heritage",
+          "product_name": "Deployable L-Band SAR",
+          "mass_kg": 26.0,
+          "dimensions_mm": {
+            "length_x": 340,
+            "width_y": 230,
+            "height_z": 500
+          },
+          "payload_envelope_u": 15.0,
+          "mounting_face": "side_deploy",
+          "avg_power_w": 60,
+          "peak_power_w": 128,
+          "nominal_data_rate_mbps": 370,
+          "spectral_band": "L-Band",
+          "ground_resolution_m": 6.0,
+          "swath_km": 60,
+          "pointing_requirement_deg": 0.025,
+          "estimated_cost_usd": 2100000
+        },
+        {
+          "payload_id": "RS-EO-LSAR-003",
+          "vendor": "Thales Heritage",
+          "product_name": "L-SAR Agriculture Mapper",
+          "mass_kg": 24.5,
+          "dimensions_mm": {
+            "length_x": 330,
+            "width_y": 220,
+            "height_z": 480
+          },
+          "payload_envelope_u": 14.0,
+          "mounting_face": "side_deploy",
+          "avg_power_w": 58,
+          "peak_power_w": 122,
+          "nominal_data_rate_mbps": 355,
+          "spectral_band": "L-Band",
+          "ground_resolution_m": 7.0,
+          "swath_km": 58,
+          "pointing_requirement_deg": 0.026,
+          "estimated_cost_usd": 1980000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Synthetic Aperture Radar",
+      "payload_variant": "P-Band SAR",
+      "products": [
+        {
+          "payload_id": "RS-EO-PSAR-001",
+          "vendor": "ESA Heritage",
+          "product_name": "P-Band Biomass Mapper",
+          "mass_kg": 34.0,
+          "dimensions_mm": {
+            "length_x": 400,
+            "width_y": 260,
+            "height_z": 580
+          },
+          "payload_envelope_u": 18.0,
+          "mounting_face": "side_deploy",
+          "avg_power_w": 78,
+          "peak_power_w": 155,
+          "nominal_data_rate_mbps": 420,
+          "spectral_band": "P-Band 435MHz",
+          "ground_resolution_m": 10.0,
+          "swath_km": 70,
+          "pointing_requirement_deg": 0.022,
+          "estimated_cost_usd": 2600000
+        },
+        {
+          "payload_id": "RS-EO-PSAR-002",
+          "vendor": "Airbus Heritage",
+          "product_name": "Deployable P-Band Soil Radar",
+          "mass_kg": 31.0,
+          "dimensions_mm": {
+            "length_x": 380,
+            "width_y": 250,
+            "height_z": 550
+          },
+          "payload_envelope_u": 17.0,
+          "mounting_face": "side_deploy",
+          "avg_power_w": 72,
+          "peak_power_w": 148,
+          "nominal_data_rate_mbps": 405,
+          "spectral_band": "P-Band",
+          "ground_resolution_m": 12.0,
+          "swath_km": 68,
+          "pointing_requirement_deg": 0.022,
+          "estimated_cost_usd": 2450000
+        }
+      ]
+    },
+    {
+      "payload_group": "Earth Observation Payloads",
+      "payload_type": "Weather Radar",
+      "payload_variant": "Weather Radar",
+      "products": [
+        {
+          "payload_id": "RS-EO-WXR-001",
+          "vendor": "NASA Heritage",
+          "product_name": "Mini Precipitation Radar",
+          "mass_kg": 12.0,
+          "dimensions_mm": {
+            "length_x": 250,
+            "width_y": 180,
+            "height_z": 320
+          },
+          "payload_envelope_u": 8.0,
+          "mounting_face": "nadir",
+          "avg_power_w": 28,
+          "peak_power_w": 52,
+          "nominal_data_rate_mbps": 210,
+          "spectral_band": "Ku/Ka Weather Radar",
+          "ground_resolution_m": 1000,
+          "swath_km": 120,
+          "pointing_requirement_deg": 0.05,
+          "estimated_cost_usd": 980000
+        },
+        {
+          "payload_id": "RS-EO-WXR-002",
+          "vendor": "JPL Heritage",
+          "product_name": "Compact Storm Radar",
+          "mass_kg": 10.5,
+          "dimensions_mm": {
+            "length_x": 230,
+            "width_y": 170,
+            "height_z": 300
+          },
+          "payload_envelope_u": 7.0,
+          "mounting_face": "nadir",
+          "avg_power_w": 24,
+          "peak_power_w": 46,
+          "nominal_data_rate_mbps": 195,
+          "spectral_band": "Ka Weather Radar",
+          "ground_resolution_m": 1200,
+          "swath_km": 110,
+          "pointing_requirement_deg": 0.05,
+          "estimated_cost_usd": 910000
+        },
+        {
+          "payload_id": "RS-EO-WXR-003",
+          "vendor": "Thales OEM",
+          "product_name": "WeatherScan Cube Radar",
+          "mass_kg": 9.8,
+          "dimensions_mm": {
+            "length_x": 220,
+            "width_y": 165,
+            "height_z": 285
+          },
+          "payload_envelope_u": 6.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 22,
+          "peak_power_w": 42,
+          "nominal_data_rate_mbps": 180,
+          "spectral_band": "Ku Weather Radar",
+          "ground_resolution_m": 1400,
+          "swath_km": 105,
+          "pointing_requirement_deg": 0.055,
+          "estimated_cost_usd": 860000
+        }
+      ]
+    },
+    {
+      "payload_group": "Scientific Instruments",
+      "payload_type": "Spectrometers",
+      "payload_variant": "Optical Spectrometers",
+      "products": [
+        {
+          "payload_id": "RS-SCI-OPSPEC-001",
+          "vendor": "Specim Space OEM",
+          "product_name": "Compact Optical Spectrometer",
+          "mass_kg": 1.6,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 140
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "nadir",
+          "avg_power_w": 7.5,
+          "peak_power_w": 10.5,
+          "nominal_data_rate_mbps": 90,
+          "spectral_band": "400-900nm",
+          "ground_resolution_m": 15,
+          "swath_km": 18,
+          "pointing_requirement_deg": 0.12,
+          "estimated_cost_usd": 190000
+        },
+        {
+          "payload_id": "RS-SCI-OPSPEC-002",
+          "vendor": "OceanInsight Space",
+          "product_name": "Orbital VIS Spectrometer",
+          "mass_kg": 1.3,
+          "dimensions_mm": {
+            "length_x": 90,
+            "width_y": 90,
+            "height_z": 120
+          },
+          "payload_envelope_u": 1.0,
+          "mounting_face": "nadir",
+          "avg_power_w": 6.2,
+          "peak_power_w": 9.0,
+          "nominal_data_rate_mbps": 78,
+          "spectral_band": "350-850nm",
+          "ground_resolution_m": 18,
+          "swath_km": 20,
+          "pointing_requirement_deg": 0.14,
+          "estimated_cost_usd": 165000
+        },
+        {
+          "payload_id": "RS-SCI-OPSPEC-003",
+          "vendor": "EnduroSat OEM",
+          "product_name": "CubeSpec-VIS",
+          "mass_kg": 1.1,
+          "dimensions_mm": {
+            "length_x": 85,
+            "width_y": 85,
+            "height_z": 110
+          },
+          "payload_envelope_u": 0.9,
+          "mounting_face": "nadir",
+          "avg_power_w": 5.5,
+          "peak_power_w": 7.8,
+          "nominal_data_rate_mbps": 72,
+          "spectral_band": "400-800nm",
+          "ground_resolution_m": 20,
+          "swath_km": 22,
+          "pointing_requirement_deg": 0.15,
+          "estimated_cost_usd": 145000
+        }
+      ]
+    },
+    {
+      "payload_group": "Scientific Instruments",
+      "payload_type": "Spectrometers",
+      "payload_variant": "UV Spectrometers",
+      "products": [
+        {
+          "payload_id": "RS-SCI-UVSPEC-001",
+          "vendor": "NASA CUVE Heritage",
+          "product_name": "Compact UV Spectrometer",
+          "mass_kg": 2.2,
+          "dimensions_mm": {
+            "length_x": 110,
+            "width_y": 110,
+            "height_z": 170
+          },
+          "payload_envelope_u": 2.0,
+          "mounting_face": "zenith",
+          "avg_power_w": 9.5,
+          "peak_power_w": 13.0,
+          "nominal_data_rate_mbps": 82,
+          "spectral_band": "190-570nm",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 280000
+        },
+        {
+          "payload_id": "RS-SCI-UVSPEC-002",
+          "vendor": "ISRO Heritage",
+          "product_name": "Mini UV Observation Spectrometer",
+          "mass_kg": 2.0,
+          "dimensions_mm": {
+            "length_x": 105,
+            "width_y": 105,
+            "height_z": 160
+          },
+          "payload_envelope_u": 1.8,
+          "mounting_face": "zenith",
+          "avg_power_w": 8.8,
+          "peak_power_w": 12.0,
+          "nominal_data_rate_mbps": 75,
+          "spectral_band": "200-550nm",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.09,
+          "estimated_cost_usd": 250000
+        }
+      ]
+    },
+    {
+      "payload_group": "Scientific Instruments",
+      "payload_type": "Spectrometers",
+      "payload_variant": "Mass Spectrometers",
+      "products": [
+        {
+          "payload_id": "RS-SCI-MSPEC-001",
+          "vendor": "NASA Goddard Heritage",
+          "product_name": "INMS CubeSat Ion Neutral Mass Spectrometer",
+          "mass_kg": 0.57,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 130
+          },
+          "payload_envelope_u": 1.3,
+          "mounting_face": "ram",
+          "avg_power_w": 1.8,
+          "peak_power_w": 3.2,
+          "nominal_data_rate_mbps": 14,
+          "spectral_band": "1-40 amu mass analysis",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.2,
+          "estimated_cost_usd": 98000
+        },
+        {
+          "payload_id": "RS-SCI-MSPEC-002",
+          "vendor": "ESA MEMS Heritage",
+          "product_name": "Miniature MEMS Space Mass Spectrometer",
+          "mass_kg": 0.74,
+          "dimensions_mm": {
+            "length_x": 105,
+            "width_y": 105,
+            "height_z": 140
+          },
+          "payload_envelope_u": 1.4,
+          "mounting_face": "ram",
+          "avg_power_w": 2.4,
+          "peak_power_w": 3.8,
+          "nominal_data_rate_mbps": 16,
+          "spectral_band": "gas molecular analysis",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.22,
+          "estimated_cost_usd": 112000
+        },
+        {
+          "payload_id": "RS-SCI-MSPEC-003",
+          "vendor": "CSEM Space OEM",
+          "product_name": "Compact Quadrupole Orbital Mass Analyzer",
+          "mass_kg": 0.82,
+          "dimensions_mm": {
+            "length_x": 110,
+            "width_y": 110,
+            "height_z": 145
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "ram",
+          "avg_power_w": 2.8,
+          "peak_power_w": 4.1,
+          "nominal_data_rate_mbps": 18,
+          "spectral_band": "neutral and ion composition",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.22,
+          "estimated_cost_usd": 118000
+        }
+      ]
+    },
+    {
+      "payload_group": "Scientific Instruments",
+      "payload_type": "Spectrometers",
+      "payload_variant": "X-Ray Spectrometers",
+      "products": [
+        {
+          "payload_id": "RS-SCI-XSPEC-001",
+          "vendor": "Amptek",
+          "product_name": "X123 SDD Space Adapted",
+          "mass_kg": 0.324,
+          "dimensions_mm": {
+            "length_x": 68.6,
+            "width_y": 99.1,
+            "height_z": 25.4
+          },
+          "payload_envelope_u": 0.25,
+          "mounting_face": "zenith",
+          "avg_power_w": 2.5,
+          "peak_power_w": 4.0,
+          "nominal_data_rate_mbps": 18,
+          "spectral_band": "0.5-30 keV",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.12,
+          "estimated_cost_usd": 90000
+        },
+        {
+          "payload_id": "RS-SCI-XSPEC-002",
+          "vendor": "MinXSS Heritage",
+          "product_name": "Miniature Solar X-Ray Spectrometer",
+          "mass_kg": 0.45,
+          "dimensions_mm": {
+            "length_x": 75,
+            "width_y": 100,
+            "height_z": 35
+          },
+          "payload_envelope_u": 0.3,
+          "mounting_face": "zenith",
+          "avg_power_w": 2.8,
+          "peak_power_w": 4.5,
+          "nominal_data_rate_mbps": 20,
+          "spectral_band": "0.8-20 keV",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.1,
+          "estimated_cost_usd": 110000
+        }
+      ]
+    },
+    {
+      "payload_group": "Scientific Instruments",
+      "payload_type": "Spectrometers",
+      "payload_variant": "Gamma-Ray Spectrometers",
+      "products": [
+        {
+          "payload_id": "RS-SCI-GSPEC-001",
+          "vendor": "CZT Space OEM",
+          "product_name": "Gamma Photon Spectrometer",
+          "mass_kg": 0.95,
+          "dimensions_mm": {
+            "length_x": 80,
+            "width_y": 80,
+            "height_z": 60
+          },
+          "payload_envelope_u": 0.5,
+          "mounting_face": "zenith",
+          "avg_power_w": 3.8,
+          "peak_power_w": 6.0,
+          "nominal_data_rate_mbps": 22,
+          "spectral_band": "10-1000 keV",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.15,
+          "estimated_cost_usd": 130000
+        },
+        {
+          "payload_id": "RS-SCI-GSPEC-002",
+          "vendor": "ESA Heritage",
+          "product_name": "Mini Gamma Burst Detector",
+          "mass_kg": 1.1,
+          "dimensions_mm": {
+            "length_x": 85,
+            "width_y": 85,
+            "height_z": 65
+          },
+          "payload_envelope_u": 0.6,
+          "mounting_face": "zenith",
+          "avg_power_w": 4.2,
+          "peak_power_w": 6.5,
+          "nominal_data_rate_mbps": 25,
+          "spectral_band": "20-1500 keV",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.15,
+          "estimated_cost_usd": 145000
+        }
+      ]
+    },
+    {
+      "payload_group": "Scientific Instruments",
+      "payload_type": "Magnetometers",
+      "payload_variant": "Magnetometers",
+      "products": [
+        {
+          "payload_id": "RS-SCI-MAG-001",
+          "vendor": "AAC Clyde Space",
+          "product_name": "CubeMag Fluxgate",
+          "mass_kg": 0.28,
+          "dimensions_mm": {
+            "length_x": 60,
+            "width_y": 60,
+            "height_z": 30
+          },
+          "payload_envelope_u": 0.15,
+          "mounting_face": "side",
+          "avg_power_w": 1.5,
+          "peak_power_w": 2.5,
+          "nominal_data_rate_mbps": 5,
+          "spectral_band": "magnetic field",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.5,
+          "estimated_cost_usd": 40000
+        },
+        {
+          "payload_id": "RS-SCI-MAG-002",
+          "vendor": "ISISPACE OEM",
+          "product_name": "Nano Fluxgate Magnetometer",
+          "mass_kg": 0.25,
+          "dimensions_mm": {
+            "length_x": 55,
+            "width_y": 55,
+            "height_z": 28
+          },
+          "payload_envelope_u": 0.1,
+          "mounting_face": "side",
+          "avg_power_w": 1.3,
+          "peak_power_w": 2.1,
+          "nominal_data_rate_mbps": 4,
+          "spectral_band": "magnetic field",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.5,
+          "estimated_cost_usd": 36000
+        }
+      ]
+    },
+    {
+      "payload_group": "Scientific Instruments",
+      "payload_type": "Particle Detectors",
+      "payload_variant": "Particle Detectors",
+      "products": [
+        {
+          "payload_id": "RS-SCI-PDET-001",
+          "vendor": "Aalto-1 Heritage",
+          "product_name": "RADMON Particle Detector",
+          "mass_kg": 0.65,
+          "dimensions_mm": {
+            "length_x": 75,
+            "width_y": 75,
+            "height_z": 45
+          },
+          "payload_envelope_u": 0.4,
+          "mounting_face": "zenith",
+          "avg_power_w": 2.2,
+          "peak_power_w": 3.5,
+          "nominal_data_rate_mbps": 12,
+          "spectral_band": "energetic particles",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.2,
+          "estimated_cost_usd": 75000
+        },
+        {
+          "payload_id": "RS-SCI-PDET-002",
+          "vendor": "ESA OEM",
+          "product_name": "Charged Particle Monitor",
+          "mass_kg": 0.72,
+          "dimensions_mm": {
+            "length_x": 80,
+            "width_y": 80,
+            "height_z": 50
+          },
+          "payload_envelope_u": 0.45,
+          "mounting_face": "zenith",
+          "avg_power_w": 2.5,
+          "peak_power_w": 3.8,
+          "nominal_data_rate_mbps": 14,
+          "spectral_band": "charged particles",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.2,
+          "estimated_cost_usd": 82000
+        }
+      ]
+    },
+    {
+      "payload_group": "Scientific Instruments",
+      "payload_type": "Atmospheric Sensors",
+      "payload_variant": "Atmospheric Sensors",
+      "products": [
+        {
+          "payload_id": "RS-SCI-ATM-001",
+          "vendor": "NASA OEM",
+          "product_name": "Upper Atmosphere Composition Sensor",
+          "mass_kg": 1.4,
+          "dimensions_mm": {
+            "length_x": 90,
+            "width_y": 90,
+            "height_z": 130
+          },
+          "payload_envelope_u": 1.0,
+          "mounting_face": "ram",
+          "avg_power_w": 5.8,
+          "peak_power_w": 8.0,
+          "nominal_data_rate_mbps": 35,
+          "spectral_band": "gas composition",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.25,
+          "estimated_cost_usd": 160000
+        },
+        {
+          "payload_id": "RS-SCI-ATM-002",
+          "vendor": "ESA OEM",
+          "product_name": "Neutral Density Atmospheric Probe",
+          "mass_kg": 1.2,
+          "dimensions_mm": {
+            "length_x": 85,
+            "width_y": 85,
+            "height_z": 120
+          },
+          "payload_envelope_u": 0.9,
+          "mounting_face": "ram",
+          "avg_power_w": 5.0,
+          "peak_power_w": 7.0,
+          "nominal_data_rate_mbps": 30,
+          "spectral_band": "atmospheric chemistry",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.25,
+          "estimated_cost_usd": 145000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Microfluidics Systems",
+      "payload_variant": "Lab-on-Chip Systems",
+      "products": [
+        {
+          "payload_id": "RS-BIO-LOC-001",
+          "vendor": "BioCube Heritage",
+          "product_name": "Microfluidic Orbital Lab Card",
+          "mass_kg": 1.4,
+          "dimensions_mm": {
+            "length_x": 95,
+            "width_y": 95,
+            "height_z": 140
+          },
+          "payload_envelope_u": 1.3,
+          "mounting_face": "internal",
+          "avg_power_w": 5.5,
+          "peak_power_w": 8.5,
+          "nominal_data_rate_mbps": 28,
+          "spectral_band": "bio-electrochemical sensing",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.5,
+          "estimated_cost_usd": 165000
+        },
+        {
+          "payload_id": "RS-BIO-LOC-002",
+          "vendor": "NASA GeneSat Heritage",
+          "product_name": "Autonomous Microfluidic Biochip",
+          "mass_kg": 1.2,
+          "dimensions_mm": {
+            "length_x": 90,
+            "width_y": 90,
+            "height_z": 130
+          },
+          "payload_envelope_u": 1.1,
+          "mounting_face": "internal",
+          "avg_power_w": 5.0,
+          "peak_power_w": 7.8,
+          "nominal_data_rate_mbps": 24,
+          "spectral_band": "microbial culture monitoring",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.5,
+          "estimated_cost_usd": 150000
+        },
+        {
+          "payload_id": "RS-BIO-LOC-003",
+          "vendor": "ESA BioLab OEM",
+          "product_name": "CubeLab Fluidics Module",
+          "mass_kg": 1.55,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 145
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "internal",
+          "avg_power_w": 6.0,
+          "peak_power_w": 9.0,
+          "nominal_data_rate_mbps": 30,
+          "spectral_band": "optical+electrochemical assay",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.5,
+          "estimated_cost_usd": 175000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Microfluidics Systems",
+      "payload_variant": "Sample Handling",
+      "products": [
+        {
+          "payload_id": "RS-BIO-SH-001",
+          "vendor": "LabSat Heritage",
+          "product_name": "Microfluidic Sample Injection Manifold",
+          "mass_kg": 0.85,
+          "dimensions_mm": {
+            "length_x": 80,
+            "width_y": 80,
+            "height_z": 70
+          },
+          "payload_envelope_u": 0.6,
+          "mounting_face": "internal",
+          "avg_power_w": 3.2,
+          "peak_power_w": 5.0,
+          "nominal_data_rate_mbps": 12,
+          "spectral_band": "sample dosing",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.6,
+          "estimated_cost_usd": 98000
+        },
+        {
+          "payload_id": "RS-BIO-SH-002",
+          "vendor": "NASA Ames Heritage",
+          "product_name": "Autonomous Fluid Routing Cartridge",
+          "mass_kg": 0.92,
+          "dimensions_mm": {
+            "length_x": 82,
+            "width_y": 82,
+            "height_z": 75
+          },
+          "payload_envelope_u": 0.7,
+          "mounting_face": "internal",
+          "avg_power_w": 3.5,
+          "peak_power_w": 5.4,
+          "nominal_data_rate_mbps": 13,
+          "spectral_band": "fluid transfer",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.6,
+          "estimated_cost_usd": 104000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Bioreactor Systems",
+      "payload_variant": "Cell Culture Systems",
+      "products": [
+        {
+          "payload_id": "RS-BIO-BIOR-001",
+          "vendor": "BioSentinel Heritage",
+          "product_name": "Orbital Cell Growth Bioreactor",
+          "mass_kg": 2.8,
+          "dimensions_mm": {
+            "length_x": 120,
+            "width_y": 120,
+            "height_z": 180
+          },
+          "payload_envelope_u": 2.5,
+          "mounting_face": "internal",
+          "avg_power_w": 9.5,
+          "peak_power_w": 14.0,
+          "nominal_data_rate_mbps": 32,
+          "spectral_band": "biological incubation",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.6,
+          "estimated_cost_usd": 240000
+        },
+        {
+          "payload_id": "RS-BIO-BIOR-002",
+          "vendor": "NASA PharmaSat Heritage",
+          "product_name": "Microgravity Culture Chamber",
+          "mass_kg": 2.4,
+          "dimensions_mm": {
+            "length_x": 115,
+            "width_y": 115,
+            "height_z": 170
+          },
+          "payload_envelope_u": 2.2,
+          "mounting_face": "internal",
+          "avg_power_w": 8.8,
+          "peak_power_w": 13.2,
+          "nominal_data_rate_mbps": 28,
+          "spectral_band": "cellular growth monitoring",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.6,
+          "estimated_cost_usd": 225000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Bioreactor Systems",
+      "payload_variant": "Culture Environment Control",
+      "products": [
+        {
+          "payload_id": "RS-BIO-CEC-001",
+          "vendor": "ESA LifeSat OEM",
+          "product_name": "Closed Loop BioReactor Module",
+          "mass_kg": 3.1,
+          "dimensions_mm": {
+            "length_x": 125,
+            "width_y": 125,
+            "height_z": 190
+          },
+          "payload_envelope_u": 2.8,
+          "mounting_face": "internal",
+          "avg_power_w": 10.5,
+          "peak_power_w": 15.5,
+          "nominal_data_rate_mbps": 35,
+          "spectral_band": "biological fluidic growth",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.6,
+          "estimated_cost_usd": 255000
+        },
+        {
+          "payload_id": "RS-BIO-CEC-002",
+          "vendor": "ActaBio Heritage",
+          "product_name": "Miniature Bioregenerative Growth Controller",
+          "mass_kg": 2.95,
+          "dimensions_mm": {
+            "length_x": 122,
+            "width_y": 122,
+            "height_z": 185
+          },
+          "payload_envelope_u": 2.7,
+          "mounting_face": "internal",
+          "avg_power_w": 10.0,
+          "peak_power_w": 15.0,
+          "nominal_data_rate_mbps": 34,
+          "spectral_band": "growth environment regulation",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.6,
+          "estimated_cost_usd": 248000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Biosensor & Analysis Systems",
+      "payload_variant": "Optical Analysis",
+      "products": [
+        {
+          "payload_id": "RS-BIO-OA-001",
+          "vendor": "MultiModal BioCube Heritage",
+          "product_name": "Electrochemical Optical BioSensor Array",
+          "mass_kg": 0.95,
+          "dimensions_mm": {
+            "length_x": 80,
+            "width_y": 80,
+            "height_z": 70
+          },
+          "payload_envelope_u": 0.6,
+          "mounting_face": "internal",
+          "avg_power_w": 3.8,
+          "peak_power_w": 6.0,
+          "nominal_data_rate_mbps": 18,
+          "spectral_band": "optical absorbance assay",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.7,
+          "estimated_cost_usd": 115000
+        },
+        {
+          "payload_id": "RS-BIO-OA-002",
+          "vendor": "Korea Univ Heritage",
+          "product_name": "27-Well Optical Detection Sensor Rack",
+          "mass_kg": 1.0,
+          "dimensions_mm": {
+            "length_x": 82,
+            "width_y": 82,
+            "height_z": 72
+          },
+          "payload_envelope_u": 0.7,
+          "mounting_face": "internal",
+          "avg_power_w": 4.0,
+          "peak_power_w": 6.1,
+          "nominal_data_rate_mbps": 18,
+          "spectral_band": "optical well monitoring",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.7,
+          "estimated_cost_usd": 118000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Biosensor & Analysis Systems",
+      "payload_variant": "Molecular Analysis",
+      "products": [
+        {
+          "payload_id": "RS-BIO-MA-001",
+          "vendor": "NASA GeneSat Heritage",
+          "product_name": "Autonomous Biochemical Sensor Suite",
+          "mass_kg": 1.05,
+          "dimensions_mm": {
+            "length_x": 82,
+            "width_y": 82,
+            "height_z": 75
+          },
+          "payload_envelope_u": 0.7,
+          "mounting_face": "internal",
+          "avg_power_w": 4.1,
+          "peak_power_w": 6.2,
+          "nominal_data_rate_mbps": 19,
+          "spectral_band": "metabolic sensing",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.7,
+          "estimated_cost_usd": 122000
+        },
+        {
+          "payload_id": "RS-BIO-MA-002",
+          "vendor": "ESA BioLab OEM",
+          "product_name": "Molecular Detection Sensor Rack",
+          "mass_kg": 1.1,
+          "dimensions_mm": {
+            "length_x": 85,
+            "width_y": 85,
+            "height_z": 80
+          },
+          "payload_envelope_u": 0.7,
+          "mounting_face": "internal",
+          "avg_power_w": 4.4,
+          "peak_power_w": 6.5,
+          "nominal_data_rate_mbps": 20,
+          "spectral_band": "molecular bio assay",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.7,
+          "estimated_cost_usd": 128000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Biosensor & Analysis Systems",
+      "payload_variant": "Flow Cytometry",
+      "products": [
+        {
+          "payload_id": "RS-BIO-FC-001",
+          "vendor": "NASA Ames OEM",
+          "product_name": "Mini Flow Cytometry Counter",
+          "mass_kg": 1.25,
+          "dimensions_mm": {
+            "length_x": 90,
+            "width_y": 90,
+            "height_z": 90
+          },
+          "payload_envelope_u": 0.8,
+          "mounting_face": "internal",
+          "avg_power_w": 4.8,
+          "peak_power_w": 7.0,
+          "nominal_data_rate_mbps": 22,
+          "spectral_band": "cell counting",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.7,
+          "estimated_cost_usd": 138000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Environmental Control Systems",
+      "payload_variant": "Life Support",
+      "products": [
+        {
+          "payload_id": "RS-BIO-ECS-001",
+          "vendor": "BioCube Heritage",
+          "product_name": "Thermal Humidity Pressure Regulation Chamber",
+          "mass_kg": 1.9,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 150
+          },
+          "payload_envelope_u": 1.5,
+          "mounting_face": "internal",
+          "avg_power_w": 7.0,
+          "peak_power_w": 11.0,
+          "nominal_data_rate_mbps": 15,
+          "spectral_band": "environment regulation",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.8,
+          "estimated_cost_usd": 145000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Environmental Control Systems",
+      "payload_variant": "Sample Preservation",
+      "products": [
+        {
+          "payload_id": "RS-BIO-SP-001",
+          "vendor": "NASA PharmaSat Heritage",
+          "product_name": "Closed Biological Environment Controller",
+          "mass_kg": 2.1,
+          "dimensions_mm": {
+            "length_x": 105,
+            "width_y": 105,
+            "height_z": 160
+          },
+          "payload_envelope_u": 1.7,
+          "mounting_face": "internal",
+          "avg_power_w": 7.8,
+          "peak_power_w": 12.2,
+          "nominal_data_rate_mbps": 16,
+          "spectral_band": "bio chamber control",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.8,
+          "estimated_cost_usd": 155000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Environmental Control Systems",
+      "payload_variant": "Centrifuge Systems",
+      "products": [
+        {
+          "payload_id": "RS-BIO-CF-001",
+          "vendor": "ESA LifeSat OEM",
+          "product_name": "Nutrient Flow and Gas Exchange Controller",
+          "mass_kg": 2.2,
+          "dimensions_mm": {
+            "length_x": 110,
+            "width_y": 110,
+            "height_z": 165
+          },
+          "payload_envelope_u": 1.8,
+          "mounting_face": "internal",
+          "avg_power_w": 8.2,
+          "peak_power_w": 12.8,
+          "nominal_data_rate_mbps": 17,
+          "spectral_band": "bio support environment",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.8,
+          "estimated_cost_usd": 162000
+        },
+        {
+          "payload_id": "RS-BIO-CF-002",
+          "vendor": "OrbitalLab OEM",
+          "product_name": "Microgravity Mini Centrifuge Rack",
+          "mass_kg": 2.35,
+          "dimensions_mm": {
+            "length_x": 112,
+            "width_y": 112,
+            "height_z": 170
+          },
+          "payload_envelope_u": 1.9,
+          "mounting_face": "internal",
+          "avg_power_w": 8.5,
+          "peak_power_w": 13.0,
+          "nominal_data_rate_mbps": 18,
+          "spectral_band": "centrifugal sample conditioning",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.8,
+          "estimated_cost_usd": 168000
+        }
+      ]
+    },
+    {
+      "payload_group": "Biological Payloads",
+      "payload_type": "Contamination Control",
+      "payload_variant": "Contamination Control",
+      "products": [
+        {
+          "payload_id": "RS-BIO-CC-001",
+          "vendor": "LabSat Heritage",
+          "product_name": "Sterile Isolation BioBarrier Module",
+          "mass_kg": 1.3,
+          "dimensions_mm": {
+            "length_x": 92,
+            "width_y": 92,
+            "height_z": 120
+          },
+          "payload_envelope_u": 1.0,
+          "mounting_face": "internal",
+          "avg_power_w": 4.5,
+          "peak_power_w": 6.5,
+          "nominal_data_rate_mbps": 10,
+          "spectral_band": "contamination isolation",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.9,
+          "estimated_cost_usd": 120000
+        }
+      ]
+    },
+    {
+      "payload_group": "Space Observation Payloads",
+      "payload_type": "Telescopes",
+      "payload_variant": "Optical Telescopes",
+      "products": [
+        {
+          "payload_id": "RS-SPC-OPT-001",
+          "vendor": "ESA CubeSpec Heritage",
+          "product_name": "CubeSpec Compact Stellar Telescope",
+          "mass_kg": 5.8,
+          "dimensions_mm": {
+            "length_x": 200,
+            "width_y": 120,
+            "height_z": 300
+          },
+          "payload_envelope_u": 6.0,
+          "mounting_face": "zenith",
+          "avg_power_w": 16.0,
+          "peak_power_w": 24.0,
+          "nominal_data_rate_mbps": 95,
+          "spectral_band": "420-620nm optical astronomy",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.005,
+          "estimated_cost_usd": 620000
+        },
+        {
+          "payload_id": "RS-SPC-OPT-002",
+          "vendor": "Exoplanet CubeSat Heritage",
+          "product_name": "Compact Photometric Observation Telescope",
+          "mass_kg": 2.4,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 180
+          },
+          "payload_envelope_u": 2.0,
+          "mounting_face": "zenith",
+          "avg_power_w": 8.5,
+          "peak_power_w": 12.5,
+          "nominal_data_rate_mbps": 48,
+          "spectral_band": "450-850nm stellar photometry",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.01,
+          "estimated_cost_usd": 245000
+        },
+        {
+          "payload_id": "RS-SPC-OPT-003",
+          "vendor": "CUVE Heritage",
+          "product_name": "UV/Visible Compact Space Telescope",
+          "mass_kg": 3.2,
+          "dimensions_mm": {
+            "length_x": 120,
+            "width_y": 120,
+            "height_z": 210
+          },
+          "payload_envelope_u": 3.0,
+          "mounting_face": "zenith",
+          "avg_power_w": 10.0,
+          "peak_power_w": 14.0,
+          "nominal_data_rate_mbps": 58,
+          "spectral_band": "190-570nm UV/VIS",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.008,
+          "estimated_cost_usd": 310000
+        },
+        {
+          "payload_id": "RS-SPC-OPT-004",
+          "vendor": "OrbitalView OEM",
+          "product_name": "Mini Astrophotometry Telescope",
+          "mass_kg": 2.1,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 165
+          },
+          "payload_envelope_u": 1.8,
+          "mounting_face": "zenith",
+          "avg_power_w": 7.5,
+          "peak_power_w": 11.0,
+          "nominal_data_rate_mbps": 42,
+          "spectral_band": "VIS astronomy",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.012,
+          "estimated_cost_usd": 210000
+        }
+      ]
+    },
+    {
+      "payload_group": "Space Observation Payloads",
+      "payload_type": "High-Energy Detectors",
+      "payload_variant": "High-Energy Detectors",
+      "products": [
+        {
+          "payload_id": "RS-SPC-HED-001",
+          "vendor": "LIGHT-1 Heritage",
+          "product_name": "RAAD Gamma Flash Detector",
+          "mass_kg": 1.2,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 100
+          },
+          "payload_envelope_u": 1.0,
+          "mounting_face": "zenith",
+          "avg_power_w": 4.5,
+          "peak_power_w": 7.0,
+          "nominal_data_rate_mbps": 22,
+          "spectral_band": "hard X-ray to soft gamma",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 145000
+        },
+        {
+          "payload_id": "RS-SPC-HED-002",
+          "vendor": "HERMES Heritage",
+          "product_name": "Transient X/Gamma Detector Module",
+          "mass_kg": 1.35,
+          "dimensions_mm": {
+            "length_x": 100,
+            "width_y": 100,
+            "height_z": 110
+          },
+          "payload_envelope_u": 1.1,
+          "mounting_face": "zenith",
+          "avg_power_w": 4.8,
+          "peak_power_w": 7.4,
+          "nominal_data_rate_mbps": 24,
+          "spectral_band": "3keV-2MeV",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.08,
+          "estimated_cost_usd": 152000
+        },
+        {
+          "payload_id": "RS-SPC-HED-003",
+          "vendor": "CUBES Heritage",
+          "product_name": "Compact X-Ray Detector Payload",
+          "mass_kg": 0.95,
+          "dimensions_mm": {
+            "length_x": 90,
+            "width_y": 90,
+            "height_z": 85
+          },
+          "payload_envelope_u": 0.8,
+          "mounting_face": "zenith",
+          "avg_power_w": 3.8,
+          "peak_power_w": 6.0,
+          "nominal_data_rate_mbps": 18,
+          "spectral_band": "35-800 keV",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.1,
+          "estimated_cost_usd": 128000
+        },
+        {
+          "payload_id": "RS-SPC-HED-004",
+          "vendor": "AstroSense OEM",
+          "product_name": "Wide Field Cosmic Event Detector",
+          "mass_kg": 1.1,
+          "dimensions_mm": {
+            "length_x": 92,
+            "width_y": 92,
+            "height_z": 90
+          },
+          "payload_envelope_u": 0.9,
+          "mounting_face": "zenith",
+          "avg_power_w": 4.0,
+          "peak_power_w": 6.2,
+          "nominal_data_rate_mbps": 19,
+          "spectral_band": "X-ray/gamma transient",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.09,
+          "estimated_cost_usd": 135000
+        }
+      ]
+    },
+    {
+      "payload_group": "Defense / Intelligence Payloads",
+      "payload_type": "Missile Warning Sensors",
+      "payload_variant": "Missile Warning IR Sensors",
+      "products": [
+        {
+          "payload_id": "RS-DEF-MWIR-001",
+          "vendor": "Orbital ISR OEM",
+          "product_name": "Wide Field Missile Plume IR Tracker",
+          "mass_kg": 3.6,
+          "dimensions_mm": {
+            "length_x": 130,
+            "width_y": 130,
+            "height_z": 180
+          },
+          "payload_envelope_u": 2.8,
+          "mounting_face": "zenith",
+          "avg_power_w": 11.5,
+          "peak_power_w": 17.0,
+          "nominal_data_rate_mbps": 55,
+          "spectral_band": "3-5um MWIR",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.03,
+          "estimated_cost_usd": 355000
+        },
+        {
+          "payload_id": "RS-DEF-MWIR-002",
+          "vendor": "AeroDefense OEM",
+          "product_name": "Persistent IR Launch Signature Detector",
+          "mass_kg": 4.1,
+          "dimensions_mm": {
+            "length_x": 140,
+            "width_y": 140,
+            "height_z": 190
+          },
+          "payload_envelope_u": 3.0,
+          "mounting_face": "zenith",
+          "avg_power_w": 12.8,
+          "peak_power_w": 18.5,
+          "nominal_data_rate_mbps": 60,
+          "spectral_band": "3-12um MWIR/LWIR",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.028,
+          "estimated_cost_usd": 388000
+        },
+        {
+          "payload_id": "RS-DEF-MWIR-003",
+          "vendor": "SentinelSpace OEM",
+          "product_name": "Compact Tactical Infrared Event Warning Sensor",
+          "mass_kg": 3.2,
+          "dimensions_mm": {
+            "length_x": 125,
+            "width_y": 125,
+            "height_z": 170
+          },
+          "payload_envelope_u": 2.5,
+          "mounting_face": "zenith",
+          "avg_power_w": 10.8,
+          "peak_power_w": 16.0,
+          "nominal_data_rate_mbps": 52,
+          "spectral_band": "4-10um IR surveillance",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.032,
+          "estimated_cost_usd": 332000
+        }
+      ]
+    },
+    {
+      "payload_group": "Defense / Intelligence Payloads",
+      "payload_type": "UV Detection Sensors",
+      "payload_variant": "UV Sensors",
+      "products": [
+        {
+          "payload_id": "RS-DEF-UV-001",
+          "vendor": "CUVE Heritage Derived",
+          "product_name": "Compact UV Event Detection Sensor",
+          "mass_kg": 2.1,
+          "dimensions_mm": {
+            "length_x": 110,
+            "width_y": 110,
+            "height_z": 150
+          },
+          "payload_envelope_u": 1.8,
+          "mounting_face": "zenith",
+          "avg_power_w": 7.5,
+          "peak_power_w": 11.0,
+          "nominal_data_rate_mbps": 36,
+          "spectral_band": "190-300nm UV",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.04,
+          "estimated_cost_usd": 225000
+        },
+        {
+          "payload_id": "RS-DEF-UV-002",
+          "vendor": "AeroPhotonics OEM",
+          "product_name": "Wide Angle Ultraviolet Transient Sensor",
+          "mass_kg": 2.35,
+          "dimensions_mm": {
+            "length_x": 112,
+            "width_y": 112,
+            "height_z": 155
+          },
+          "payload_envelope_u": 2.0,
+          "mounting_face": "zenith",
+          "avg_power_w": 8.0,
+          "peak_power_w": 11.8,
+          "nominal_data_rate_mbps": 38,
+          "spectral_band": "200-350nm UV detection",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.042,
+          "estimated_cost_usd": 238000
+        },
+        {
+          "payload_id": "RS-DEF-UV-003",
+          "vendor": "SkyShield OEM",
+          "product_name": "UV Flash Signature Monitoring Payload",
+          "mass_kg": 2.0,
+          "dimensions_mm": {
+            "length_x": 108,
+            "width_y": 108,
+            "height_z": 148
+          },
+          "payload_envelope_u": 1.7,
+          "mounting_face": "zenith",
+          "avg_power_w": 7.2,
+          "peak_power_w": 10.5,
+          "nominal_data_rate_mbps": 34,
+          "spectral_band": "far UV event sensing",
+          "ground_resolution_m": null,
+          "swath_km": null,
+          "pointing_requirement_deg": 0.045,
+          "estimated_cost_usd": 218000
+        }
+      ]
+    }
+  ]
+}
